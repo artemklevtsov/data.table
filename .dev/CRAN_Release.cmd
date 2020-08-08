@@ -208,22 +208,22 @@ grep asCharacter *.c | grep -v PROTECT | grep -v SET_VECTOR_ELT | grep -v setAtt
 
 cd ..
 R
-cc(test=TRUE, clean=TRUE, CC="gcc-8")  # to compile with -pedandic -Wall, latest gcc as CRAN: https://cran.r-project.org/web/checks/check_flavors.html
+cc(test=TRUE, clean=TRUE, CC="gcc-10")  # to compile with -pedandic -Wall, latest gcc as CRAN: https://cran.r-project.org/web/checks/check_flavors.html
 saf = options()$stringsAsFactors
 options(stringsAsFactors=!saf)    # check tests (that might be run by user) are insensitive to option, #2718
 test.data.table()
 install.packages("xml2")   # to check the 150 URLs in NEWS.md under --as-cran below
 q("no")
 R CMD build .
-R CMD check data.table_1.12.9.tar.gz --as-cran
-R CMD INSTALL data.table_1.12.9.tar.gz --html
+R CMD check data.table_1.13.1.tar.gz --as-cran
+R CMD INSTALL data.table_1.13.1.tar.gz --html
 
 # Test C locale doesn't break test suite (#2771)
 echo LC_ALL=C > ~/.Renviron
 R
 Sys.getlocale()=="C"
 q("no")
-R CMD check data.table_1.12.9.tar.gz
+R CMD check data.table_1.13.1.tar.gz
 rm ~/.Renviron
 
 # Test non-English does not break test.data.table() due to translation of messages; #3039, #630
@@ -262,7 +262,7 @@ alias R310=~/build/R-3.1.0/bin/R
 ### END ONE TIME BUILD
 
 cd ~/GitHub/data.table
-R310 CMD INSTALL ./data.table_1.12.9.tar.gz
+R310 CMD INSTALL ./data.table_1.13.1.tar.gz
 R310
 require(data.table)
 test.data.table(script="*.Rraw")
@@ -274,7 +274,7 @@ test.data.table(script="*.Rraw")
 vi ~/.R/Makevars
 # Make line SHLIB_OPENMP_CFLAGS= active to remove -fopenmp
 R CMD build .
-R CMD INSTALL data.table_1.12.9.tar.gz   # ensure that -fopenmp is missing and there are no warnings
+R CMD INSTALL data.table_1.13.1.tar.gz   # ensure that -fopenmp is missing and there are no warnings
 R
 require(data.table)   # observe startup message about no OpenMP detected
 test.data.table()
@@ -282,7 +282,7 @@ q("no")
 vi ~/.R/Makevars
 # revert change above
 R CMD build .
-R CMD check data.table_1.12.9.tar.gz
+R CMD check data.table_1.13.1.tar.gz
 
 
 #####################################################
@@ -304,13 +304,14 @@ cd R-devel  # used for revdep testing: .dev/revdep.R.
 ./configure CFLAGS="-O2 -Wall -pedantic"
 make
 
-# use latest available below `apt cache search gcc-` or `clang-`
-cd ../R-devel-strict-clang
-./configure --without-recommended-packages --disable-byte-compiled-packages --disable-openmp --enable-strict-barrier --disable-long-double CC="clang-8 -fsanitize=undefined,address -fno-sanitize=float-divide-by-zero -fno-omit-frame-pointer"
+# use latest available `apt-cache search gcc-` or `clang-`
+cd ~/build/R-devel-strict-clang
+./configure --without-recommended-packages --disable-byte-compiled-packages --disable-openmp --enable-strict-barrier --disable-long-double CC="clang-10 -fsanitize=undefined,address -fno-sanitize=float-divide-by-zero -fno-omit-frame-pointer"
 make
 
-cd ../R-devel-strict-gcc
-./configure --without-recommended-packages --disable-byte-compiled-packages --disable-openmp --enable-strict-barrier --disable-long-double CC="gcc-8 -fsanitize=undefined,address -fno-sanitize=float-divide-by-zero -fno-omit-frame-pointer"
+cd ~/build/R-devel-strict-gcc
+# gcc-10 (in dev currently) failed to build R, so using regular gcc-9 (9.3.0 as per focal/Pop!_OS 20.04)
+./configure --without-recommended-packages --disable-byte-compiled-packages --disable-openmp --enable-strict-barrier --disable-long-double CC="gcc-9 -fsanitize=undefined,address -fno-sanitize=float-divide-by-zero -fno-omit-frame-pointer"
 make
 
 # See R-exts#4.3.3
@@ -331,8 +332,8 @@ alias Rdevel-strict-gcc='~/build/R-devel-strict-gcc/bin/R --vanilla'
 alias Rdevel-strict-clang='~/build/R-devel-strict-clang/bin/R --vanilla'
 
 cd ~/GitHub/data.table
-Rdevel-strict-gcc CMD INSTALL data.table_1.12.9.tar.gz
-Rdevel-strict-clang CMD INSTALL data.table_1.12.9.tar.gz
+Rdevel-strict-gcc CMD INSTALL data.table_1.13.1.tar.gz
+Rdevel-strict-clang CMD INSTALL data.table_1.13.1.tar.gz
 # Check UBSAN and ASAN flags appear in compiler output above. Rdevel was compiled with them so should be passed through to here
 Rdevel-strict-gcc
 Rdevel-strict-clang  # repeat below with clang and gcc
@@ -373,7 +374,7 @@ cd R-devel
 make
 cd ~/GitHub/data.table
 vi ~/.R/Makevars  # make the -O0 -g line active, for info on source lines with any problems
-Rdevel CMD INSTALL data.table_1.12.9.tar.gz
+Rdevel CMD INSTALL data.table_1.13.1.tar.gz
 Rdevel -d "valgrind --tool=memcheck --leak-check=full --track-origins=yes --show-leak-kinds=definite"
 # gctorture(TRUE)      # very slow, many days
 # gctorture2(step=100)
@@ -411,7 +412,7 @@ cd ~/build/rchk/trunk
 . ../scripts/config.inc
 . ../scripts/cmpconfig.inc
 vi ~/.R/Makevars   # set CFLAGS=-O0 -g so that rchk can provide source line numbers
-echo 'install.packages("~/GitHub/data.table/data.table_1.12.9.tar.gz",repos=NULL)' | ./bin/R --slave
+echo 'install.packages("~/GitHub/data.table/data.table_1.13.1.tar.gz",repos=NULL)' | ./bin/R --slave
 # objcopy warnings (if any) can be ignored: https://github.com/kalibera/rchk/issues/17#issuecomment-497312504
 . ../scripts/check_package.sh data.table
 cat packages/lib/data.table/libs/*check
@@ -479,7 +480,7 @@ sudo apt-get -y install r-base r-base-dev
 sudo apt-get -y build-dep r-base-dev
 sudo apt-get -y build-dep qpdf
 sudo apt-get -y install aptitude
-sudo aptitude build-dep r-cran-rgl   # leads to libglu1-mesa-dev
+sudo aptitude -y build-dep r-cran-rgl   # leads to libglu1-mesa-dev
 sudo apt-get -y build-dep r-cran-rmpi
 sudo apt-get -y build-dep r-cran-cairodevice
 sudo apt-get -y build-dep r-cran-tkrplot
@@ -490,8 +491,7 @@ sudo apt-get -y install libv8-dev
 sudo apt-get -y install gsl-bin libgsl0-dev
 sudo apt-get -y install libgtk2.0-dev netcdf-bin
 sudo apt-get -y install libcanberra-gtk-module
-sudo apt-get -y install git
-sudo apt-get -y install openjdk-8-jdk
+sudo apt-get -y install openjdk-11-jdk   # solves "fatal error: jni.h: No such file or directory"; change 11 to match "java --version"
 sudo apt-get -y install libnetcdf-dev udunits-bin libudunits2-dev
 sudo apt-get -y install tk8.6-dev
 sudo apt-get -y install clustalo  # for package LowMACA
@@ -512,7 +512,7 @@ sudo apt-get -y install libmagick++-dev  # for magick
 sudo apt-get -y install libjq-dev libprotoc-dev libprotobuf-dev and protobuf-compiler   # for protolite
 sudo apt-get -y install python-dev  # for PythonInR
 sudo apt-get -y install gdal-bin libgeos-dev  # for rgdal/raster tested via lidR
-sudo apt-get build-dep r-cran-rsymphony   # for Rsymphony: coinor-libcgl-dev coinor-libclp-dev coinor-libcoinutils-dev coinor-libosi-dev coinor-libsymphony-dev
+sudo apt-get -y build-dep r-cran-rsymphony   # for Rsymphony: coinor-libcgl-dev coinor-libclp-dev coinor-libcoinutils-dev coinor-libosi-dev coinor-libsymphony-dev
 sudo apt-get -y install libtesseract-dev libleptonica-dev tesseract-ocr-eng   # for tesseract
 sudo apt-get -y install libssl-dev libsasl2-dev
 sudo apt-get -y install biber   # for ctsem
@@ -520,6 +520,8 @@ sudo apt-get -y install libopenblas-dev  # for ivmte (+ local R build with defau
 sudo apt-get -y install libhiredis-dev  # for redux used by nodbi
 sudo apt-get -y install libzmq3-dev   # for rzmq
 sudo apt-get -y install libimage-exiftool-perl   # for camtrapR
+sudo apt-get -y install parallel   # for revdepr.R
+sudo apt-get -y install pandoc-citeproc   # for basecallQC
 sudo R CMD javareconf
 # ENDIF
 
@@ -563,7 +565,7 @@ du -k inst/tests                # 1.5MB before
 bzip2 inst/tests/*.Rraw         # compress *.Rraw just for release to CRAN; do not commit compressed *.Rraw to git
 du -k inst/tests                # 0.75MB after
 R CMD build .
-R CMD check data.table_1.12.8.tar.gz --as-cran
+R CMD check data.table_1.13.0.tar.gz --as-cran
 #
 bunzip2 inst/tests/*.Rraw.bz2  # decompress *.Rraw again so as not to commit compressed *.Rraw to git
 #
@@ -571,30 +573,31 @@ Resubmit to winbuilder (R-release, R-devel and R-oldrelease)
 Submit to CRAN. Message template :
 ------------------------------------------------------------
 Hello,
-779 CRAN revdeps checked. No status changes.
-All R-devel issues resolved.
-New gcc10 warnings resolved.
-Solaris is not resolved but this release will write more output upon that error so I can trace the problem.
+870 CRAN revdeps checked.
+The following 3 are impacted and we have communicated with their maintainers:
+  expss nc memochange
+All known issues resolved including clang-UBSAN additional issue.
+Solaris is not resolved but this release will write more output upon that error so I can continue to trace that problem.
 Many thanks!
 Best, Matt
 ------------------------------------------------------------
 DO NOT commit or push to GitHub. Leave 4 files (.dev/CRAN_Release.cmd, DESCRIPTION, NEWS and init.c) edited and not committed. Include these in a single and final bump commit below.
 DO NOT even use a PR. Because PRs build binaries and we don't want any binary versions of even release numbers available from anywhere other than CRAN.
-Leave milestone open with a 'final checks' issue open. Keep updating status there.
+Leave milestone open with a 'release checks' issue open. Keep updating status there.
 ** If on EC2, shutdown instance. Otherwise get charged for potentially many days/weeks idle time with no alerts **
 If it's evening, SLEEP.
 It can take a few days for CRAN's checks to run. If any issues arise, backport locally. Resubmit the same even version to CRAN.
 CRAN's first check is automatic and usually received within an hour. WAIT FOR THAT EMAIL.
 When CRAN's email contains "Pretest results OK pending a manual inspection" (or similar), or if not and it is known why not and ok, then bump dev.
 ###### Bump dev
-0. Close milestone to prevent new issues being tagged with it. The final 'release checks' issue can be left open in a closed milestone.
+0. Close milestone to prevent new issues being tagged with it. Update its name to the even release. The final 'release checks' issue can be left open in a closed milestone.
 1. Check that 'git status' shows 4 files in modified and uncommitted state: DESCRIPTION, NEWS.md, init.c and this .dev/CRAN_Release.cmd
 2. Bump version in DESCRIPTION to next odd number. Note that DESCRIPTION was in edited and uncommitted state so even number never appears in git.
 3. Add new heading in NEWS for the next dev version. Add "(submitted to CRAN on <today>)" on the released heading.
 4. Bump dllVersion() in init.c
 5. Bump 3 version numbers in Makefile
-6. Search and replace this .dev/CRAN_Release.cmd to update 1.12.7 to 1.12.9, and 1.12.6 to 1.12.8 (e.g. in step 8 and 9 below)
+6. Search and replace this .dev/CRAN_Release.cmd to update 1.12.9 to 1.13.1, and 1.12.8 to 1.13.0 (e.g. in step 8 and 9 below)
 7. Another final gd to view all diffs using meld. (I have `alias gd='git difftool &> /dev/null'` and difftool meld: http://meldmerge.org/)
-8. Push to master with this consistent commit message: "1.12.8 on CRAN. Bump to 1.12.9"
-9. Take sha from step 8 and run `git tag 1.12.8 34796cd1524828df9bf13a174265cb68a09fcd77` then `git push origin 1.12.8` (not `git push --tags` according to https://stackoverflow.com/a/5195913/403310)
+8. Push to master with this consistent commit message: "1.13.0 on CRAN. Bump to 1.13.1"
+9. Take sha from step 8 and run `git tag 1.13.0 34796cd1524828df9bf13a174265cb68a09fcd77` then `git push origin 1.13.0` (not `git push --tags` according to https://stackoverflow.com/a/5195913/403310)
 ######
