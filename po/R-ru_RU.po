@@ -2,12 +2,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: data.table 1.12.9\n"
 "POT-Creation-Date: 2020-07-17 14:38\n"
-"PO-Revision-Date: 2020-08-08 23:23+0700\n"
+"PO-Revision-Date: 2020-08-15 14:00+0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.3\n"
 "Last-Translator: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
@@ -757,354 +757,429 @@ msgid "attempting to assign invalid object to dimnames of a data.table"
 msgstr ""
 
 msgid "data.tables do not have rownames"
-msgstr ""
+msgstr "data.tables не содержит имен строк"
 
 msgid "Can't assign"
-msgstr ""
+msgstr "Невозможно присвоить"
 
 msgid "colnames to a"
-msgstr ""
+msgstr "имена столбцов таблице data.table с"
 
 msgid "-column data.table"
-msgstr ""
+msgstr "столбцами"
 
 msgid "'subset' must evaluate to logical"
-msgstr ""
+msgstr "результат вычисления 'subset' должен иметь тип logical"
 
 msgid "Argument 'invert' must be logical TRUE/FALSE"
-msgstr ""
+msgstr "Аргумент 'invert' должен быть логическим TRUE/FALSE"
 
 msgid "x argument must be a data.table"
-msgstr ""
+msgstr "аргумент x должен быть таблицей data.table"
 
 msgid "group length is 0 but data nrow > 0"
-msgstr ""
+msgstr "длина группы равна 0, но количество строк в данных > 0"
 
 msgid ""
 "passing 'f' argument together with 'by' is not allowed, use 'by' when split "
 "by column in data.table and 'f' when split by external factor"
 msgstr ""
+"не допускается передача аргумента 'f' вместе с аргументом 'by', используйте "
+"'by' при разделении по столбцу в таблице и 'f' при разделении по внешнему "
+"фактору"
 
 msgid "Either 'by' or 'f' argument must be supplied"
-msgstr ""
+msgstr "Необходимо задать аргумент 'by' или 'f'"
 
 msgid "Column '.ll.tech.split' is reserved for split.data.table processing"
-msgstr ""
+msgstr "Столбец '.ll.tech.split' зарезервирован для обработки split.data.table"
 
 msgid "Column '.nm.tech.split' is reserved for split.data.table processing"
-msgstr ""
+msgstr "Столбец '.nm.tech.split' зарезервирован для обработки split.data.table"
 
 msgid "Argument 'by' must refer to column names in x"
-msgstr ""
+msgstr "Аргумент 'by' должен ссылаться на имена столбцов в x"
 
 msgid ""
 "Argument 'by' must refer only to atomic-type columns, but the following "
 "columns are non-atomic:"
 msgstr ""
+"Аргумент 'by' должен ссылаться только на столбцы атомарного типа, но "
+"следующие столбцы не являются атомарными:"
 
 msgid ""
 "x is not a data.table. Shallow copy is a copy of the vector of column "
 "pointers (only), so is only meaningful for data.table"
 msgstr ""
+"x не является таблицей data.table. Поверхностная копия копирует только "
+"вектор указателей на столбцы и поэтому имеет смысл только для data.table"
 
 msgid "setalloccol attempting to modify `*tmp*`"
-msgstr ""
+msgstr "попытка изменить `*tmp*` при помощи setalloccol"
 
 msgid ""
 "Input is a length=1 logical that points to the same address as R's global "
 "value. Therefore the attribute has not been set by reference, rather on a "
 "copy. You will need to assign the result back to a variable. See issue #1281."
 msgstr ""
+"Ввод является вектором типа logical единичной длины, ссылающимся на тот же "
+"адрес, что и значение в глобальном окружении R. Следовательно, атрибут был "
+"установлен не по ссылке, а при помощи создания копии. Вам нужно будет "
+"присвоить результат переменной. См. issue #1281."
 
 msgid "x is not a data.table or data.frame"
-msgstr ""
+msgstr "x не является таблицей data.table или data.frame"
 
 msgid "x has"
-msgstr ""
+msgstr "x содержит"
 
 msgid "columns but its names are length"
-msgstr ""
+msgstr "столбцов, но длина имен равна"
 
 msgid "Passed a vector of type '"
-msgstr ""
+msgstr "Передан вектор типа '"
 
 msgid "'. Needs to be type 'character'."
-msgstr ""
+msgstr "'. Требуется вектор типа 'character'."
 
 msgid "names to a"
-msgstr ""
+msgstr "имен"
 
 msgid "column data.table"
-msgstr ""
+msgstr "столбцу data.table"
 
 msgid "'new' is not a character vector or a function"
-msgstr ""
+msgstr "'new' не является вектором типа character или функцией"
 
+# "в позициях" звучит коряво, м.б. из контекста все понятно и можно оставить просто "в"
 msgid "NA in 'new' at positions"
-msgstr ""
+msgstr "NA в 'new' в местах"
 
 msgid "Some duplicates exist in 'old':"
-msgstr ""
+msgstr "В 'old' присутствуют дубликаты:"
 
 msgid "'old' is type"
-msgstr ""
+msgstr "'old' имеет тип"
 
 msgid "but should be integer, double or character"
-msgstr ""
+msgstr "но должен иметь тип integer, double или character"
 
 msgid "'old' is length"
-msgstr ""
+msgstr "'old' имеет длину"
 
 msgid "but 'new' is length"
-msgstr ""
+msgstr "но длина 'new' равна"
 
 msgid "NA (or out of bounds) in 'old' at positions"
-msgstr ""
+msgstr "NA (или выход за границы объекта) в 'old' в местах"
 
+# ваще не понял, о чем это
+#, fuzzy
 msgid "of 'old' is '"
-msgstr ""
+msgstr "в 'old' является '"
 
 msgid ""
 "' which appears several times in column names. Just the first will be "
 "changed. There are"
 msgstr ""
+"`, который присутствует несколько раз в именах столбцов. Будет изменено "
+"только первое значение. Также есть"
 
 msgid "other items in old that are also duplicated in column names."
-msgstr ""
+msgstr "других значений в old, которые повторяются в именах столбцов."
 
 msgid "Items of 'old' not found in column names:"
-msgstr ""
+msgstr "Следующие значения из 'old' не найдены в именах столбцов:"
 
 msgid ". Consider skip_absent=TRUE."
-msgstr ""
+msgstr ". Вы можете использовать skip_absent=TRUE."
 
 msgid "Internal error: length(i)!=length(new)"
-msgstr ""
+msgstr "Внутренняя ошибка: length(i)!=length(new)"
 
 msgid "x has some duplicated column name(s):"
-msgstr ""
+msgstr "x содержит повторы в именах столбцов:"
 
 msgid ". Please remove or rename the duplicate(s) and try again."
-msgstr ""
+msgstr ". Пожалуйста, удалите или переименуйте их и повторите попытку."
 
 msgid "Input is"
-msgstr ""
+msgstr "Ввод является"
 
 msgid "but should be a plain list of items to be stacked"
-msgstr ""
+msgstr "но должен быть плоским списком значений, которые будут объединяться"
 
 msgid ""
 "idcol must be a logical or character vector of length 1. If logical TRUE the "
 "id column will named '.id'."
 msgstr ""
+"idcol должен быть вектором типа logical или character единичной длины. Если "
+"имеет логическое значение TRUE, столбец id будет назван '.id'."
 
+# контекст непонятен
+#, fuzzy
 msgid "use.names=NA invalid"
-msgstr ""
+msgstr "Нельзя использовать use.names=NA"
 
 msgid ""
 "use.names='check' cannot be used explicitly because the value 'check' is new "
 "in v1.12.2 and subject to change. It is just meant to convey default "
 "behavior. See ?rbindlist."
 msgstr ""
+"use.names='check' нельзя использовать в явном виде, поскольку значение "
+"'check' впервые появилось в версии v1.12.2 и в дальнейшем будет меняться. Он "
+"просто предназначен для отображения поведения по умолчанию. См. ?rbindlist."
 
 msgid ""
 "Check that is.data.table(DT) == TRUE. Otherwise, := and `:=`(...) are "
 "defined for use in j, once only and in particular ways. See help(\":=\")."
 msgstr ""
+"Проверьте, выполняется ли условие is.data.table(DT) == TRUE. Если причина не "
+"в этом, то := и `:=`(...) предназначены для однократного использования в j, "
+"причем строго определенным образом. См. help(\":=\")."
 
 msgid ""
 "setDF only accepts data.table, data.frame or list of equal length as input"
 msgstr ""
+"setDF принимает только таблицы data.table, data.frame или список с "
+"элементами равной длины"
 
 msgid "rownames contains duplicates"
-msgstr ""
+msgstr "имена строк содержат повторяющиеся значения"
 
 msgid "rownames incorrect length; expected"
-msgstr ""
+msgstr "имена строк имеют неправильную длину; ожидается"
 
 msgid "names, got"
-msgstr ""
+msgstr "имен, задано"
 
 msgid "All elements in argument 'x' to 'setDF' must be of same length"
-msgstr ""
+msgstr "Все элементы аргумента 'x' функции 'setDF' должны иметь равную длину"
 
 msgid "Cannot find symbol"
-msgstr ""
+msgstr "Невозможно найти символ"
 
 msgid "Cannot convert '"
-msgstr ""
+msgstr "Невозможно преобразовать '"
 
+# Блокировка связывания?
+#, fuzzy
 msgid ""
 "' to data.table by reference because binding is locked. It is very likely "
 "that '"
 msgstr ""
+"' в таблицу data.table по ссылке из-за блокировки связывания. Скорее всего, '"
 
 msgid ""
 "' resides within a package (or an environment) that is locked to prevent "
 "modifying its variable bindings. Try copying the object to your current "
 "environment, ex: var <- copy(var) and then using setDT again."
 msgstr ""
+"' принадлежит пакету (или окружению), которое заблокировано для "
+"предотвращения изменения связывания его переменных. Попробуйте скопировать "
+"объект в ваше текущее окружение, например: var <- copy(var), а затем снова "
+"использовать setDT."
 
 msgid "Some columns are a multi-column type (such as a matrix column):"
 msgstr ""
+"Некоторые столбцы представляют собой мульти-столбцы (такие как столбец-"
+"матрица):"
 
 msgid ""
 ". setDT will retain these columns as-is but subsequent operations like "
 "grouping and joining may fail. Please consider as.data.table() instead which "
 "will create a new column for each embedded column."
 msgstr ""
+". setDT сохранить эти столбцы как есть, но последующие операции, такие как "
+"группировка и объединение, могут не сработать. Пожалуйста, вместо этого "
+"рассмотрите возможность использования as.data.table() - эта функция создаст "
+"отдельный столбец для каждого из вложенных столбцов."
 
 msgid "Column"
-msgstr ""
+msgstr "Столбец"
 
 msgid ""
 "is of POSIXlt type. Please convert it to POSIXct using as.POSIXct and run "
 "setDT again. We do not recommend use of POSIXlt at all because it uses 40 "
 "bytes to store one date."
 msgstr ""
+"имеет тип POSIXlt. Пожалуйста, преобразуйте его в POSIXct при помощи as."
+"POSIXct и запустите setDT снова. Мы не рекомендуем использовать POSIXlt, т."
+"к. этот тип расходует 40 байт на хранение одной даты."
 
 msgid ""
 "All elements in argument 'x' to 'setDT' must be of same length, but the "
 "profile of input lengths (length:frequency) is:"
 msgstr ""
+"Все элементы аргумента 'x' функции 'setDT' должны иметь одинаковую длины, но "
+"распределение длины элементов (длина:частота) следующее:"
 
 msgid "%s:%d"
-msgstr ""
+msgstr "%s:%d"
 
 msgid "The first entry with fewer than"
-msgstr ""
+msgstr "Первой записью с менее чем"
 
 msgid "entries is"
-msgstr ""
+msgstr "элементами является"
 
 msgid ""
 "Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'"
 msgstr ""
+"Аргумент 'x' функции 'setDT' должен быть списком или таблицей  'data."
+"frame'/'data.table'"
 
 msgid "Item '"
-msgstr ""
+msgstr "Элемент '"
 
 msgid "' not found in names of input list"
-msgstr ""
+msgstr "' не найден среди имен входного списка"
 
 msgid "'prefix' must be NULL or a character vector of length 1."
 msgstr ""
+"'prefix' должен представлять собой NULL или быть вектором типа character "
+"единичной длины."
 
 msgid "x is a single vector, non-NULL 'cols' doesn't make sense."
 msgstr ""
+"x является отдельным вектором, непустое (non-NULL) значение 'cols' не имеет "
+"смысла."
 
 msgid "x is a list, 'cols' cannot be 0-length."
-msgstr ""
+msgstr "x представляет собой список, 'cols' не может иметь нулевую длину."
 
 msgid ""
 "RHS of %s is length %d which is not 1 or nrow (%d). For robustness, no "
 "recycling is allowed (other than of length 1 RHS). Consider %%in%% instead."
 msgstr ""
+"RHS %s имеет длину %d, которая не равна 1 или nrow (%d). Для более "
+"стабильной работы повторение (recycling) элементов не допускается (кроме "
+"случая, когда RHS имеет длину 1). Рассмотрите использование %%in%% вместо "
+"этого."
 
 msgid ""
 "Internal error in .isFastSubsettable. Please report to data.table developers"
 msgstr ""
+"Внутренняя ошибка в .isFastSubsettable. Просьба уведомить разработчиков"
 
 msgid ""
 "'on' argument should be a named atomic vector of column names indicating "
 "which columns in 'i' should be joined with which columns in 'x'."
 msgstr ""
+"Аргумент 'on' должен быть именованным атомарным вектором имен столбцов, "
+"указывающим, какие столбцы в 'i' и 'x' должны объединяться."
 
 msgid "Found more than one operator in one 'on' statement:"
-msgstr ""
+msgstr "Обнаружен более чем один оператор в выражении 'on':"
 
 msgid ". Please specify a single operator."
-msgstr ""
+msgstr ". Пожалуйста, укажите один операторю"
 
 msgid "'on' contains no column name:"
-msgstr ""
+msgstr "'on' не содержит имя столбца:"
 
 msgid ". Each 'on' clause must contain one or two column names."
-msgstr ""
+msgstr ". Каждый пункт в должен содержать одно или два имени столбцов."
 
 msgid "'on' contains more than 2 column names:"
-msgstr ""
+msgstr "'on' содержит более 2 имен столбцов:"
 
 msgid "Invalid operators"
-msgstr ""
+msgstr "Недопустимые операторы"
 
 msgid ". Only allowed operators are"
-msgstr ""
+msgstr ". Допустимыми операторами являются"
 
 msgid "."
-msgstr ""
+msgstr "."
 
 msgid "There is no package %s in provided repository."
-msgstr ""
+msgstr "Пакет %s отсутствует в указанном репозитории."
 
 msgid "'fromLast' must be TRUE or FALSE"
-msgstr ""
+msgstr "'fromLast' должен иметь значение TRUE или FALSE"
 
 msgid "x must be an atomic vector or data.frames/data.tables"
-msgstr ""
+msgstr "x должен быть атомарным вектором или таблицей data.frames/data.table"
 
 msgid "Using '"
-msgstr ""
+msgstr "В качестве столбца значений используется '"
 
 msgid "' as value column. Use 'value.var' to override"
-msgstr ""
+msgstr "'. Используйте 'value.var', чтобы задать другой вариант"
 
 msgid "The dcast generic in data.table has been passed a"
-msgstr ""
+msgstr "Генерической функции dcast пакета data.table был передан"
 
 msgid ""
 ", but data.table::dcast currently only has a method for data.tables. Please "
 "confirm your input is a data.table, with setDT("
 msgstr ""
+", но data.table::dcast в настоящий момент содержит метод только для таблиц "
+"data.tables. Пожалуйста, подтвердите, что ваш объект имеет тип data.table, "
+"использовав setDT("
 
 msgid ") or as.data.table("
-msgstr ""
+msgstr ") или as.data.table("
 
 msgid ""
 "). If you intend to use a reshape2::dcast, try installing that package "
 "first, but do note that reshape2 is deprecated and you should be migrating "
 "your code away from using it."
 msgstr ""
+"). Если вы хотите использовать reshape2::dcast, сперва установите этот "
+"пакет, но помните, что reshape2 устарел; вам придется переписать свой код, "
+"чтобы избежать его использования."
 
 msgid ""
 "and will attempt to redirect to the reshape2::dcast; please note that "
 "reshape2 is deprecated, and this redirection is now deprecated as well. "
 "Please do this redirection yourself like reshape2::dcast("
 msgstr ""
+"и будет осуществлена попытка переадресовать обработку функции reshape2::"
+"dcast; пожалуйста, обратите внимание, что пакет reshape2 устарел, также как "
+"и эта переадресация. Переадресовать можно вручную при помощи reshape2::dcast("
 
 msgid "). In the next version, this warning will become an error."
 msgstr ""
+"). В следующей версии данное предупреждение станет сообщением об ошибке."
 
 msgid ""
 "Invalid formula. Cast formula should be of the form LHS ~ RHS, for e.g., a + "
 "b ~ c."
 msgstr ""
+"Неправильная формула. Формула должна иметь вид LHS ~ RHS, например, a + b ~ "
+"c."
 
 msgid "data.table to cast must have unique column names"
 msgstr ""
+"таблица data.table, передаваемая функции cast, должна иметь уникальные имена "
+"столбцов"
 
 msgid "value.var values ["
-msgstr ""
+msgstr "значения value.var ["
 
 msgid "] are not found in 'data'."
-msgstr ""
+msgstr "] не найдены в 'data'."
 
 msgid ""
 "When 'fun.aggregate' and 'value.var' are both lists, 'value.var' must be "
 "either of length =1 or =length(fun.aggregate)."
 msgstr ""
+"Когда и 'fun.aggregate', и 'value.var' являются списками, длина 'value.var' "
+"должна быть равна 1 или length(fun.aggregate)."
 
 msgid "'data' must be a data.table."
-msgstr ""
+msgstr "'data' должен быть таблицей data.table."
 
 msgid "'drop' must be logical TRUE/FALSE"
-msgstr ""
+msgstr "'drop' должен быть логическим TRUE/FALSE"
 
 msgid "Column ["
-msgstr ""
+msgstr "Столбец ["
 
 msgid "] not found or of unknown type."
-msgstr ""
+msgstr "] не найден или имеет неизвестный тип."
 
 msgid "Columns specified in formula can not be of type list"
 msgstr ""
