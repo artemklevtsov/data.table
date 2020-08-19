@@ -14,292 +14,347 @@ msgstr ""
 "Language: ru\n"
 
 msgid "data.table package loaded. When developing don't load package"
-msgstr ""
+msgstr "пакет data.table загружен. Не загружайте пакет при разработке"
 
+#, fuzzy
 msgid ""
 "Internal error -- difftime objects may not be added to IDate, but Ops "
 "dispatch should have intervened to prevent this"
 msgstr ""
+"Внутренняя ошибка -- объекты difftime не могу быть прибавлены к IDate, но "
+"диспетчеризация Ops должна вмешаться, чтобы предотвратить это"
 
 msgid "binary + is not defined for \"IDate\" objects"
-msgstr ""
+msgstr "бинарный + не определён для объектов \"IDate\""
 
 msgid "can only subtract from \"IDate\" objects"
-msgstr ""
+msgstr "можно вычитать только объекты \"IDate\""
 
+#, fuzzy
 msgid "Internal error: storage mode of IDate is somehow no longer integer"
 msgstr ""
+"Внутренняя ошибка: способ хранения IDate почему-то больше не целочисленный"
 
 msgid "unary - is not defined for \"IDate\" objects"
-msgstr ""
+msgstr "унарный - не определён для объектов IDate"
 
+#, fuzzy
 msgid ""
 "Internal error -- difftime objects may not be subtracted from IDate, but Ops "
 "dispatch should have intervened to prevent this"
 msgstr ""
+"Внутренняя ошибка -- объекты difftime не могут быть вычтены из IDate, но "
+"диспетчеризация Ops должна вмешаться, чтобы предотвратить это"
 
 msgid "Valid options for ms are 'truncate',"
-msgstr ""
+msgstr "Допустимые значения для ms - 'truncate',"
 
 msgid "'nearest', and 'ceil'."
-msgstr ""
+msgstr "'nearest' и 'ceil'."
 
 msgid ""
 "as.data.table.array method should only be called for arrays with 3+ "
 "dimensions; use the matrix method for 2-dimensional arrays"
 msgstr ""
+"as.data.table.array метод должен быть вызван только для массивов с 3+ "
+"измерениями; используйте matrix метод для 2-мерных массивов"
 
 msgid ""
 "Argument 'value.name' must be scalar character, non-NA and at least one "
 "character"
 msgstr ""
+"Аргумент 'value.name' должен быть скалярным строковым значением, не NA и "
+"содержать более одного символа"
 
 msgid "Argument 'sorted' must be scalar logical and non-NA"
-msgstr ""
+msgstr "Аргумент 'sorted' должен бать скалярным логическим значением и не NA"
 
 msgid "Argument 'na.rm' must be scalar logical and non-NA"
-msgstr ""
+msgstr "Аргумент 'na.rm' должен быть скалярным логическим значением и не NA"
 
 msgid "Please provide either 'key' or 'sorted', but not both."
-msgstr ""
+msgstr "Пожалуйста, укажите 'key' или 'sorted', но не оба."
 
 msgid "Argument 'value.name' should not overlap with column names in result:"
 msgstr ""
+"Аргумент 'value.name' не должен совпадать с именами столбцов в результате:"
 
+#, fuzzy
 msgid ""
 "POSIXlt column type detected and converted to POSIXct. We do not recommend "
 "use of POSIXlt at all because it uses 40 bytes to store one date."
 msgstr ""
+"Тип столбца POSIXlt определён и преобразован в POSIXct. Мы не рекомендуем "
+"использовать POSIXlt вообще, потому что он используется 40 байт для хранения "
+"одной даты."
 
 msgid "Item"
-msgstr ""
+msgstr "Элемент"
 
 msgid "has"
-msgstr ""
+msgstr "имеет"
 
 msgid "rows but longest item has"
-msgstr ""
+msgstr "строк, но самый длинный элемент имеет"
 
+#, fuzzy
 msgid "; recycled with remainder."
-msgstr ""
+msgstr "; заполнено циклическим повторением."
 
 msgid "has 0 rows but longest item has"
-msgstr ""
+msgstr "имеет 0 строк, но самый длинный элемент имеет"
 
 msgid "; filled with NA"
-msgstr ""
+msgstr "; заполнено NA"
 
 msgid "A column may not be called .SD. That has special meaning."
-msgstr ""
+msgstr "Столбец не может быть назван .SD. Это имя зарезервировано."
 
 msgid "class must be length 1"
-msgstr ""
+msgstr "атрибут class должен иметь длину 1"
 
 msgid "between has been passed an argument x of type logical"
-msgstr ""
+msgstr "в between был передан аргумент x логического типа"
 
 msgid ""
 "'between' function the 'x' argument is a POSIX class while 'lower' was not, "
 "coercion to POSIX failed with:"
 msgstr ""
+"Аргумент 'x' в функции 'between' POSIX, в том время как 'lower' нет, "
+"преобразование в POSIX не удалось по причине:"
 
 msgid ""
 "'between' function the 'x' argument is a POSIX class while 'upper' was not, "
 "coercion to POSIX failed with:"
 msgstr ""
+"Аргумент 'x' в функции 'between' POSIX, в том время как 'upper' нет, "
+"преобразование в POSIX не удалось по причине:"
 
 msgid ""
 "'between' lower= and upper= are both POSIXct but have different tzone "
 "attributes:"
 msgstr ""
+"Оба Аргумента lower= и upper= функции 'between' - POSIXct, но имеют "
+"различные атрибуты tzone:"
 
 msgid ". Please align their time zones."
-msgstr ""
+msgstr ". Пожалуйста, согласуйте их временные зоны."
 
 msgid ""
 "'between' arguments are all POSIXct but have mismatched tzone attributes:"
 msgstr ""
+"Все аргументы 'between' POSIXct, но имеют различающиеся атрибуты tzone:"
 
 msgid ". The UTC times will be compared."
-msgstr ""
+msgstr ". Будет сопоставлено время в UTC."
 
 msgid "trying to use integer64 class when 'bit64' package is not installed"
 msgstr ""
+"попытка использовать класс integer64, в то время как пакет 'bit64' не "
+"установлен"
 
 msgid ""
 "Not yet implemented NAbounds=TRUE for this non-numeric and non-character type"
 msgstr ""
+"NAbounds=TRUE ещё не реализован для этого не числового (non-numeric) и не "
+"строкового (non-character) типов"
 
 msgid "Some lower>upper for this non-numeric and non-character type"
 msgstr ""
+"Некоторые lower>upper для этого не числового (non-numeric) и не строкового "
+"(non-character) типа"
 
 msgid "RHS has length()"
-msgstr ""
+msgstr "RHS имеет длинну length()"
 
 msgid "; expecting length 2."
-msgstr ""
+msgstr "; ожидается длинна 2."
 
 msgid "c"
-msgstr ""
+msgstr "c"
 
 msgid "Perhaps you meant %s?"
-msgstr ""
+msgstr "Возможно вы имели в виду %s?"
 
 msgid "The first element should be the lower bound(s);"
-msgstr ""
+msgstr "Первый элемент должен быть нижней границей;"
 
 msgid "the second element should be the upper bound(s)."
-msgstr ""
+msgstr "второй элемент должен быть верхней границей."
 
 msgid "x."
-msgstr ""
+msgstr "x."
 
 msgid "is type"
-msgstr ""
+msgstr "имеет тип"
 
 msgid "which is not supported by data.table join"
-msgstr ""
+msgstr ", который не поддерживается data.table объединением"
 
 msgid "i."
-msgstr ""
+msgstr "i."
 
 msgid "Attempting roll join on factor column when joining x."
 msgstr ""
+"Попытка скользящего объединение (roll join) по факторному столбцу при "
+"объединении x. "
 
 msgid "to i."
-msgstr ""
+msgstr "с i."
 
+#, fuzzy
 msgid ". Only integer, double or character columns may be roll joined."
 msgstr ""
+". Только столбцы типа integer, double или character могут участвовать в "
+"скользящем объединении."
 
 msgid "Incompatible join types: x."
-msgstr ""
+msgstr "Не совместимые типы для объединения: x."
 
 msgid "("
-msgstr ""
+msgstr "("
 
 msgid ") and i."
-msgstr ""
+msgstr ") и i."
 
 msgid "). Factor columns must join to factor or character columns."
 msgstr ""
+"). Факторные столбцы должны объединяться с факторными (factor) или "
+"строковыми (character) столбцами."
 
 msgid ")"
-msgstr ""
+msgstr ")"
 
 msgid "Incompatible join types:"
-msgstr ""
+msgstr "Несовместимость объединяемых типов:"
 
 msgid "is type integer64 but"
-msgstr ""
+msgstr "является типом integer64, а"
 
 msgid "is type double and contains fractions"
-msgstr ""
+msgstr "является типом double и содержит дроби"
 
 msgid "roll is not implemented for non-equi joins yet."
-msgstr ""
+msgstr "скольжение (roll) ещё не реализовано для неэквивалентных объединений."
 
 msgid "Column name '_nqgrp_' is reserved for non-equi joins."
-msgstr ""
+msgstr "Имя столбца '_nqgrp_' зарезервировано для неэквивалентных объединений."
 
 msgid "key argument of data.table() must be character"
-msgstr ""
+msgstr "data.table аргумент key должен быть строковым вектором"
 
 msgid "Object '"
-msgstr ""
+msgstr "Объект '"
 
 msgid "' not found. Perhaps you intended"
-msgstr ""
+msgstr "' не найден. Возможно вы имели в виду"
 
 msgid ","
-msgstr ""
+msgstr ","
 
 msgid "or"
-msgstr ""
+msgstr "или"
 
 msgid "more"
-msgstr ""
+msgstr "более"
 
 msgid "' not found amongst"
-msgstr ""
+msgstr "' не найден среди"
 
 msgid "and"
-msgstr ""
+msgstr "и"
 
 msgid "Provide either by= or keyby= but not both"
-msgstr ""
+msgstr "Укажите или by= или keyby=, но не оба"
 
 msgid "Ignoring keyby= because j= is not supplied"
-msgstr ""
+msgstr "keyby= игнорируется, потому что j= не указан"
 
 msgid "Ignoring by= because j= is not supplied"
-msgstr ""
+msgstr "by= игнорируется, потому что j= не указан"
 
 msgid ""
 "When on= is provided but not i=, on= must be a named list or data.table|"
 "frame, and a natural join (i.e. join on common names) is invoked. Ignoring "
 "on= which is '"
 msgstr ""
+"Когда указан on= и не указан i=, on= должен быть именованным списком или "
+"data.table|frame. Будет выполнено естественное объединение (то есть "
+"объединение по общим столбцам) и on= ('"
 
 msgid "'."
-msgstr ""
+msgstr "') проигнорирован."
 
 msgid ""
 "i and j are both missing so ignoring the other arguments. This warning will "
 "be upgraded to error in future."
 msgstr ""
+"i и j не указаны, так что остальные аргументы проигнорированы. Данное "
+"предупреждение будет преобразовано в ошибку в будущем."
 
 msgid "mult argument can only be 'first', 'last' or 'all'"
-msgstr ""
+msgstr "Аргумент mult может быть только 'first', 'last' или 'all'."
 
 msgid ""
 "roll must be a single TRUE, FALSE, positive/negative integer/double "
 "including +Inf and -Inf or 'nearest'"
 msgstr ""
+"roll должен быть скалярным TRUE, FALSE, положительным/отрицательным целым/"
+"дробным числом, включая +Inf и -Inf, или 'nearest'"
 
 msgid "roll is '"
-msgstr ""
+msgstr "roll является '"
 
 msgid "' (type character). Only valid character value is 'nearest'."
 msgstr ""
+"' (строковый тип). Валидным строковым значением может быть только 'nearest'."
 
 msgid "rollends must be a logical vector"
-msgstr ""
+msgstr "rollends должен быть логическим вектором"
 
 msgid "rollends must be length 1 or 2"
-msgstr ""
+msgstr "длинна rollends должна быть 1 или 2"
 
 msgid ""
 "nomatch= must be either NA or NULL (or 0 for backwards compatibility which "
 "is the same as NULL)"
 msgstr ""
+"nomatch= должен быть NA или NULL (или 0 для обратной совместимости, что "
+"означает тоже, что и NULL)"
 
 msgid "which= must be a logical vector length 1. Either FALSE, TRUE or NA."
-msgstr ""
+msgstr "which= должен быть логическим вектором длинной 1. TRUE, FALSE или NA."
 
 msgid "which=="
-msgstr ""
+msgstr "which=="
 
 msgid ""
 "(meaning return row numbers) but j is also supplied. Either you need row "
 "numbers or the result of j, but only one type of result can be returned."
 msgstr ""
+"(означает вернуть номера строк), но вы также указали j. Вы можете получить "
+"номера строк или результат выполнения j (только один тип результата может "
+"быть получен)."
 
 msgid ""
 "which=NA with nomatch=0 would always return an empty vector. Please change "
 "or remove either which or nomatch."
 msgstr ""
+"указание which=NA вместе с nomatch=0 всегда возвращают пустой вектор. "
+"Измените или удалите which или nomatch."
 
 msgid "j must be provided when with=FALSE"
-msgstr ""
+msgstr "j должен быть указан, когда with=FALSE"
 
 msgid ""
 "The symbol .. is invalid. The .. prefix must be followed by at least one "
 "character."
 msgstr ""
+"Символ .. не корректный. Префикс .. должен предшествовать строковому "
+"значению, содержащему не менее одного символа."
 
 msgid "Variable '"
-msgstr ""
+msgstr "Переменная '"
 
 msgid ""
 "' is not found in calling scope. Looking in calling scope because you used "
