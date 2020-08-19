@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: data.table 1.12.9\n"
 "POT-Creation-Date: 2020-07-17 14:38\n"
-"PO-Revision-Date: 2020-08-18 02:27+0300\n"
+"PO-Revision-Date: 2020-08-20 02:35+0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2138,126 +2138,150 @@ msgid "None of the datasets should contain a column named '.seqn'"
 msgstr ""
 
 msgid "Internal error: ncol(current)==ncol(target) was checked above"
-msgstr ""
+msgstr "Количество столбцов в сравниваемых датасетах не совпадает"
 
 msgid "None of the datasets to compare should contain a column named '.seqn'"
-msgstr ""
+msgstr "Датасеты не должны иметь столбцы с '.seqn' в названии"
 
 msgid ""
 "Datasets to compare with 'ignore.row.order' must not have unsupported column "
 "types:"
 msgstr ""
+"При использовании 'ignore.row.order' в датасетах не должно быть "
+"неподдерживаемых типов столбцов:"
 
 msgid ""
 "Argument 'tolerance' was forced to lowest accepted value `sqrt(.Machine"
 "$double.eps)` from provided"
 msgstr ""
+"Значение аргумента 'tolerance' было изменено на минимальное допустимое "
+"значение `sqrt(.Machine$double.eps)` "
 
 msgid ""
 "Duplicate rows in datasets, numeric columns and ignore.row.order cannot be "
 "used with non 0 tolerance argument"
 msgstr ""
+"В датасетах встречаются дубликаты строк, численные столбцы и ignore.row."
+"order не могут быть использованы при ненулевом значении аргумента 'tolerance'"
 
 msgid ""
 "Factor columns and ignore.row.order cannot be used with non 0 tolerance "
 "argument"
 msgstr ""
+"Столбцы-факторы (factor) и ignore.row.order не могут быть использованы при "
+"ненулевом значении аргумента 'tolerance'"
 
+# это нельзя переводить буквально
+#, fuzzy
 msgid "Internal error: factor type mismatch should have been caught earlier"
-msgstr ""
+msgstr "Один из сравниваемых столбцов является фактором, а второй - нет"
 
 msgid "argument 'fill' ignored, only make sense for type='const'"
 msgstr ""
+"аргумент 'fill' проигнорирован, так как он имеет смысл только при "
+"type='const'"
 
 msgid "order.col='"
-msgstr ""
+msgstr "Значение в order.col='"
 
 msgid "' not a column name of info"
 msgstr ""
+"' должно быть названием одного из информационных столбцов (MB, NAME, NROW, "
+"NCOL, COLS, KEY, INDICES)"
 
 msgid "data.table package is loaded. Unload or start a fresh R session."
 msgstr ""
+"пакет data.table уже загружен. Выгрузите пакет или начните новую R-сессию."
 
 msgid ""
 "script must end with '.Rraw'. If a file ending '.Rraw.bz2' exists, that will "
 "be found and used."
-msgstr ""
+msgstr "скрипт должен иметь расширение '.Rraw' или '.Rraw.bz2'."
 
 msgid "Neither %s nor %s exist in %s"
-msgstr ""
+msgstr "Ни скрипта %s, ни скрипта %s нет в директории %s"
 
 msgid "Failed after test"
-msgstr ""
+msgstr "Завершился ошибкой тест"
 
 msgid "before the next test() call in"
-msgstr ""
+msgstr ", перед следующим вызовом test() в "
 
+#, fuzzy
 msgid "out of"
-msgstr ""
+msgstr "ошибок из"
 
 msgid ". Search"
-msgstr ""
+msgstr "тестов. Смотрите в"
 
 msgid "for test number"
-msgstr ""
+msgstr "следующие номера тестов:"
 
+#, fuzzy
 msgid "Timings count mismatch:"
-msgstr ""
+msgstr "Количество итераций не совпадает с количеством тестов:"
 
 msgid "vs"
-msgstr ""
+msgstr "вместо"
 
 msgid "Test"
-msgstr ""
+msgstr "Тест"
 
 msgid ""
 "is invalid: when error= is provided it does not make sense to pass y as well"
 msgstr ""
+"некорректен: если задан аргумент error=, нет необходимости задавать значение "
+"аргумента y"
 
 msgid "Use started.at=proc.time() not Sys.time() (POSIXt and slow)"
 msgstr ""
+"Используйте started.at=proc.time(), а не Sys.time(), которая медленная  и "
+"использует POSIXt"
 
 msgid "make.names='"
-msgstr ""
+msgstr "Столбцы, названия или номера которых заданы в make.names='"
 
 msgid "' not found in names of input"
-msgstr ""
+msgstr "' не найдены в входящем датасете"
 
 msgid "make.names="
-msgstr ""
+msgstr "Количество столбцов, перечисленных в make.names="
 
 msgid "is out of range [1,ncol="
-msgstr ""
+msgstr "должно быть меньше или равно количеству столбцов в датасете [1, ncol="
 
 msgid "'names' must be TRUE/FALSE or a character vector."
 msgstr ""
+"Значения в 'names' должны быть TRUE/FALSE или вектором строковых значений "
+"(character)."
 
 msgid "'keep' should contain integer values between"
-msgstr ""
+msgstr "Аргумент 'keep' должен содержать целые значения из интервала"
 
+#, fuzzy
 msgid "length(names) (="
-msgstr ""
+msgstr "Количество элементов в 'names' ("
 
 msgid ") is not equal to length("
-msgstr ""
+msgstr ") не равно количеству колонок в  результате "
 
 msgid ") (="
-msgstr ""
+msgstr "("
 
 msgid ")."
-msgstr ""
+msgstr ")."
 
 msgid "l not type list"
-msgstr ""
+msgstr "в l можно использовать только список"
 
 msgid "Argument 'nan' must be length 1"
-msgstr ""
+msgstr "Передаваемый аргумент должен состоять из одного элемента"
 
 msgid "Argument 'nan' must be NA or NaN"
-msgstr ""
+msgstr "Аргумент должен иметь значение NA или NaN"
 
 msgid "x not boolean"
-msgstr ""
+msgstr "x не логического типа (boolean)"
 
 msgid ""
 "Some columns are type 'integer64' but package bit64 is not installed. Those "
@@ -2265,36 +2289,48 @@ msgid ""
 "to reload the data. Simply install.packages('bit64') to obtain the integer64 "
 "print method and print the data again."
 msgstr ""
+"Некоторые столбцы типа 'integer64' , однако пакет bit64 не установлен. Эти "
+"столбцы будут отображаться в виде чисел с плавающей точкой. Нет "
+"необходимости перезагружать данные. Достаточно будет установить пакет bit64 "
+"с помощью install.packages('bit64'), подключить его и и заново вывести на "
+"печать данные."
 
 msgid "Pattern"
-msgstr ""
+msgstr "Паттерн(ы)"
 
 msgid "not found: ["
-msgstr ""
+msgstr "не найден(ы): ["
 
 msgid "keep.rownames must be length 1"
-msgstr ""
+msgstr "в аргумент keep.rownames необходимо передавать только одно значение"
 
 msgid "keep.rownames must not be NA"
-msgstr ""
+msgstr "в keep.rownames нельзя использовать NA"
 
 msgid ""
 "Input xts object should not have '%s' column because it would result in "
 "duplicate column names. Rename '%s' column in xts or use `keep.rownames` to "
 "change the index column name."
 msgstr ""
+"Во входящем xts-объекте не должно быть столбца '%s', потому что это вызовет "
+"дупликацию названий столбцов. Переименуйте столбец '%s' в xts или "
+"используйте аргумент `keep.rownames`, чтобы изменить название столбца "
+"индекса."
 
 msgid ""
 "data.table must have a time based column in first position, use "
 "`setcolorder` function to change the order, or see ?timeBased for supported "
 "types"
 msgstr ""
+"Первым столбцом в data.table-таблице должен быть столбец с временем, "
+"используйте `setcolorder` для изменения порядка столбцов, или смотрите "
+"справку ?timeBased по поддерживаемым типам."
 
 msgid "Following columns are not numeric and will be omitted:"
-msgstr ""
+msgstr "Следующие столбцы нечисленного типа и будут удалены:"
 
 msgid "%d variable not shown: %s\n"
 msgid_plural "%d variables not shown: %s\n"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d переменная не отображена: %s\n"
+msgstr[1] "%d переменные не отображено: %s\n"
+msgstr[2] "%d переменных не отображено: %s\n"
