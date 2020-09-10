@@ -8,12 +8,12 @@ msgstr ""
 "Project-Id-Version: data.table 1.12.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-17 14:38+0800\n"
-"PO-Revision-Date: 2020-08-24 18:25+0700\n"
+"PO-Revision-Date: 2020-09-11 02:29+0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.3\n"
 "Last-Translator: Artem Klevtsov <a.a.klevtsov@gmail.com>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
@@ -1156,12 +1156,12 @@ msgstr ""
 
 #: fifelse.c:68
 msgid "'yes' and 'na' are both type factor but their levels are different."
-msgstr ""
+msgstr "'yes' и 'na' факторы, но у них разные уровни."
 
 #: fifelse.c:138
 #, c-format
 msgid "Type %s is not supported."
-msgstr ""
+msgstr "Тип %s не поддерживается."
 
 #: fifelse.c:152
 #, c-format
@@ -1170,26 +1170,29 @@ msgid ""
 "consisting of logical condition, resulting value pairs (in that order). Note "
 "that the default argument must be named explicitly, e.g., default=0"
 msgstr ""
+"Получено %d аргументов; в  ... необходимо четное число аргументов, состоящих "
+"из пар \"логического условие,  результат\". Обращаем внимание, что аргумент "
+"'default' должен быть назван явно, например, default=0"
 
 #: fmelt.c:18
 msgid "'x' must be an integer"
-msgstr ""
+msgstr "'x' должно быть целым числом"
 
 #: fmelt.c:19
 msgid "'n' must be a positive integer"
-msgstr ""
+msgstr "'n' должно быть положительным целым числом"
 
 #: fmelt.c:41
 msgid "Argument to 'which' must be logical"
-msgstr ""
+msgstr "Аргумент к 'which' должен быть логическим"
 
 #: fmelt.c:70
 msgid "concat: 'vec must be a character vector"
-msgstr ""
+msgstr "concat: 'vec' должен быть строковым вектором"
 
 #: fmelt.c:71
 msgid "concat: 'idx' must be an integer vector of length >= 0"
-msgstr ""
+msgstr "concat: 'idx' должен быть целочисленным вектором с длиной >=0"
 
 #: fmelt.c:75
 #, c-format
@@ -1197,11 +1200,13 @@ msgid ""
 "Internal error in concat: 'idx' must take values between 0 and length(vec); "
 "0 <= idx <= %d"
 msgstr ""
+"Внутренняя ошибка в concat: 'idx' должен принимать значения между 0 и длиной "
+"вектора 'vec'; 0 <= idx <= %d"
 
 #: fmelt.c:102
 #, c-format
 msgid "Unknown 'measure.vars' type %s at index %d of list"
-msgstr ""
+msgstr "Неизвестный тип  %s в 'measure.vars'  в позиции номер %d"
 
 #: fmelt.c:148
 #, c-format
@@ -1211,79 +1216,102 @@ msgid ""
 "this case are columns [%s]. Consider providing at least one of 'id' or "
 "'measure' vars in future."
 msgstr ""
+"если и id.vars, и measure.vars  равны 'NULL', то они угадываются "
+"автоматически. Все нечисловые и нелогические столбцы рассматриваются, как id."
+"vars. В этом случае это столбцы [%s]. В будущем указывайте хотя бы одну из "
+"переменных 'id.vars'  или  'measure.vars'."
 
 #: fmelt.c:154 fmelt.c:219
 #, c-format
 msgid "Unknown 'id.vars' type %s, must be character or integer vector"
 msgstr ""
+"Неизвестный тип  'id.vars' :  %s. Аргумент 'id.vars' должен быть либо "
+"строковым, либо целочисленным"
 
 #: fmelt.c:159 fmelt.c:223
 msgid "One or more values in 'id.vars' is invalid."
-msgstr ""
+msgstr "В 'id.vars' неверны одно или более значений."
 
 #: fmelt.c:175
 msgid ""
 "'measure.vars' is missing. Assigning all columns other than 'id.vars' "
 "columns as 'measure.vars'.\n"
 msgstr ""
+"аргумент 'measure.vars' пропущен. Используем все столбцы, кроме 'id.vars', "
+"как  'measure.vars'.\n"
 
 #: fmelt.c:176
 #, c-format
 msgid "Assigned 'measure.vars' are [%s].\n"
-msgstr ""
+msgstr "Используемые 'measure.vars': [%s].\n"
 
 #: fmelt.c:184
 #, c-format
 msgid ""
 "Unknown 'measure.vars' type %s, must be character or integer vector/list"
 msgstr ""
+"Неизвестный тип 'measure.vars': %s.  Аргумент 'measure.vars' должен быть "
+"строковым или целочисленным вектором/списком"
 
 #: fmelt.c:193 fmelt.c:239
 msgid "One or more values in 'measure.vars' is invalid."
-msgstr ""
+msgstr "В 'measure.vars' неверны одно или более значений."
 
 #: fmelt.c:211
 msgid ""
 "'id.vars' is missing. Assigning all columns other than 'measure.vars' "
 "columns as 'id.vars'.\n"
 msgstr ""
+"аргумент 'id.vars' пропущен. Используем все столбцы, кроме 'measure.vars', "
+"как  'id.vars'.\n"
 
 #: fmelt.c:212
 #, c-format
 msgid "Assigned 'id.vars' are [%s].\n"
-msgstr ""
+msgstr "Используемые 'id.vars': [%s].\n"
 
 #: fmelt.c:231
 #, c-format
 msgid "Unknown 'measure.vars' type %s, must be character or integer vector"
 msgstr ""
+"Неизвестный тип 'measure.vars': %s.  Аргумент 'measure.vars' должен быть "
+"строковым или целочисленным вектором"
 
 #: fmelt.c:276
 msgid ""
 "When 'measure.vars' is a list, 'value.name' must be a character vector of "
 "length =1 or =length(measure.vars)."
 msgstr ""
+"Когда  'measure.vars' - список, 'value.name' должен быть строковым вектором "
+"единичной длины или равен по длине 'measure.vars'."
 
 #: fmelt.c:277
 msgid ""
 "When 'measure.vars' is either not specified or a character/integer vector, "
 "'value.name' must be a character vector of length =1."
 msgstr ""
+"Когда 'measure.vars' или не задан, или строковый/целочисленный вектор, "
+"'value.name' должен быть строковым вектором единичной длины."
 
 #: fmelt.c:280
 msgid "'variable.name' must be a character/integer vector of length=1."
 msgstr ""
+"'variable.name' должен быть строковым/целочисленным вектором единичной длины."
 
 #: fmelt.c:329
 msgid ""
 "Internal error: combineFactorLevels in fmelt.c expects all-character input"
 msgstr ""
+"Внутренняя ошибка: combineFactorLevels в fmelt.c ожидает только строковые "
+"аргументы"
 
 #: fmelt.c:332
 msgid ""
 "Internal error: combineFactorLevels in fmelt.c expects a character target to "
 "factorize"
 msgstr ""
+"Внутренняя ошибка: combineFactorLevels в fmelt.c для факторизации ожидает "
+"строковую цель"
 
 #: fmelt.c:385
 #, c-format
@@ -1293,73 +1321,84 @@ msgid ""
 "type '%s' will be coerced too. Check DETAILS in ?melt.data.table for more on "
 "coercion.\n"
 msgstr ""
+"'measure.vars' [%s] разного типа. В порядке иерархии, столбец с результатом "
+"будет типа '%s'. Все переменные  другого типа (не '%s') из 'measure.vars' "
+"будут к нему приведены. Для более подробной информации о приведении типов "
+"смотрите DETAILS в ?melt.data.table.\n"
 
 #: fmelt.c:387
 #, c-format
 msgid ""
 "The molten data value type is a list at item %d. 'na.rm=TRUE' is ignored.\n"
 msgstr ""
+"Тип результатирующего значения для элемента %d - список. 'na.rm = TRUE' "
+"проигнорировано.\n"
 
 #: fmelt.c:490
 #, c-format
 msgid "Unknown column type '%s' for column '%s'."
-msgstr ""
+msgstr "Неизвестный тип столбца '%s' у столбца '%s'."
 
 #: fmelt.c:514
 #, c-format
 msgid "Internal error: fmelt.c:getvarcols %d %d"
-msgstr ""
+msgstr "Внутренняя ошибка: fmelt.c:getvarcols %d %d"
 
 #: fmelt.c:662
 #, c-format
 msgid "Unknown column type '%s' for column '%s' in 'data'"
-msgstr ""
+msgstr "Неизвестный тип столбца '%s' у столбца '%s'  в 'data' ."
 
 #: fmelt.c:673
 msgid "Input is not of type VECSXP, expected a data.table, data.frame or list"
 msgstr ""
+"Ввод не является типом VECSXP, ожидается data.table, data.frame или list "
+"(список)"
 
 #: fmelt.c:674
 msgid "Argument 'value.factor' should be logical TRUE/FALSE"
-msgstr ""
+msgstr "Аргумент 'value.factor' должен быть логическим (TRUE/FALSE)"
 
 #: fmelt.c:675
 msgid "Argument 'variable.factor' should be logical TRUE/FALSE"
-msgstr ""
+msgstr "Аргумент 'variable.factor' должен быть логическим (TRUE/FALSE)"
 
 #: fmelt.c:676
 msgid "Argument 'na.rm' should be logical TRUE/FALSE."
-msgstr ""
+msgstr "Аргумент 'na.rm' должен быть логическим (TRUE/FALSE)"
 
 #: fmelt.c:677
 msgid "Argument 'variable.name' must be a character vector"
-msgstr ""
+msgstr "Аргумент 'variable.name' должен быть строковым вектором"
 
 #: fmelt.c:678
 msgid "Argument 'value.name' must be a character vector"
-msgstr ""
+msgstr "Аргумент 'value.name' должен быть строковым вектором"
 
 #: fmelt.c:679
 msgid "Argument 'verbose' should be logical TRUE/FALSE"
-msgstr ""
+msgstr "Аргумент 'verbose' должен быть логическим (TRUE/FALSE)"
 
 #: fmelt.c:683
 msgid "ncol(data) is 0. Nothing to melt. Returning original data.table."
 msgstr ""
+"в данных нет колонок (ncol(data) равно 0). Возвращаем исходный data.table."
 
 #: fmelt.c:688
 msgid "names(data) is NULL. Please report to data.table-help"
 msgstr ""
+"names(data) равно NULL. Пожалуйста, сообщите об этой ошибке в data.table-help"
 
 #: forder.c:107
 #, c-format
 msgid "Failed to realloc thread private group size buffer to %d*4bytes"
 msgstr ""
+"Не удалось увеличить размер буфера приватной группы потока до %d*4bytes"
 
 #: forder.c:121
 #, c-format
 msgid "Failed to realloc group size result to %d*4bytes"
-msgstr ""
+msgstr "Не удалось увеличить размер  результата группы до %d*4bytes"
 
 #: forder.c:264
 #, c-format
@@ -1367,14 +1406,16 @@ msgid ""
 "Logical error. counts[0]=%d in cradix but should have been decremented to 0. "
 "radix=%d"
 msgstr ""
+"Логическая ошибка. counts[0]=%d в cradix, а должна быть уменьшена до 0. "
+"radix=%d"
 
 #: forder.c:279
 msgid "Failed to alloc cradix_counts"
-msgstr ""
+msgstr "Не удалось выделить cradix_counts"
 
 #: forder.c:281
 msgid "Failed to alloc cradix_tmp"
-msgstr ""
+msgstr "Не удалось выделить cradix_tmp"
 
 #: forder.c:292
 #, c-format
@@ -1382,66 +1423,75 @@ msgid ""
 "Internal error: ustr isn't empty when starting range_str: ustr_n=%d, "
 "ustr_alloc=%d"
 msgstr ""
+"Внутренняя ошибка: ustr не пустой, когда начинаем range_str: ustr_n=%d, "
+"ustr_alloc=%d"
 
 #: forder.c:293
 msgid "Internal error: ustr_maxlen isn't 0 when starting range_str"
-msgstr ""
+msgstr "Внутренняя ошибка: ustr_maxlen не ноль, когда начинаем range_str"
 
 #: forder.c:313
 #, c-format
 msgid "Unable to realloc %d * %d bytes in range_str"
-msgstr ""
+msgstr "Не можем выделить %d * %d байт в range_str"
 
 #: forder.c:331
 msgid "Failed to alloc ustr3 when converting strings to UTF8"
-msgstr ""
+msgstr "Не удалось выделить ustr3 во время конвертации в UTF8"
 
 #: forder.c:349
 msgid "Failed to alloc tl when converting strings to UTF8"
-msgstr ""
+msgstr "Не удалось выделить tl во время конвертации в UTF8"
 
 #: forder.c:378
 msgid "Must an integer or numeric vector length 1"
-msgstr ""
+msgstr "Должен быть целым или числовым вектором единичной длины"
 
 #: forder.c:379
 msgid "Must be 2, 1 or 0"
-msgstr ""
+msgstr "Должен быть равен 2, 1 или 0"
 
 #: forder.c:413
 msgid "Unknown non-finite value; not NA, NaN, -Inf or +Inf"
-msgstr ""
+msgstr "Неизвестное неконечное значение; не NA, NaN, -Inf и не +Inf"
 
 #: forder.c:435
 msgid ""
 "Internal error: input is not either a list of columns, or an atomic vector."
 msgstr ""
+"Внутренняя ошибка: аргумент и не список колонок, и не элементарный вектор."
 
 #: forder.c:437
 msgid ""
 "Internal error: input is an atomic vector (not a list of columns) but by= is "
 "not NULL"
 msgstr ""
+"Внутренняя ошибка: аргумент - элементарный вектор (не список колонок), но "
+"by= не NULL"
 
 #: forder.c:439
 msgid ""
 "Input is an atomic vector (not a list of columns) but order= is not a length "
 "1 integer"
 msgstr ""
+"Аргумент - элементарный вектор (не список колонок), но order= не является "
+"целочисленным вектором единичной длины"
 
 #: forder.c:441
 #, c-format
 msgid "forder.c received a vector type '%s' length %d\n"
-msgstr ""
+msgstr "forder.c получил вектор типа '%s' длиной %d\n"
 
 #: forder.c:449
 #, c-format
 msgid "forder.c received %d rows and %d columns\n"
 msgstr ""
+"forder.c получил %d строк и %d столбцов\n"
+"\n"
 
 #: forder.c:452
 msgid "Internal error: DT is an empty list() of 0 columns"
-msgstr ""
+msgstr "Внутренняя ошибка: DT - пустой список с нулевым количеством столбцов"
 
 #: forder.c:454
 #, c-format
@@ -1449,44 +1499,47 @@ msgid ""
 "Internal error: DT has %d columns but 'by' is either not integer or is "
 "length 0"
 msgstr ""
+"Внутренняя ошибка: у DT %d столбцов, но 'by' или нецелое, или нулевой длины"
 
 #: forder.c:456
 #, c-format
 msgid ""
 "Either order= is not integer or its length (%d) is different to by='s length "
 "(%d)"
-msgstr ""
+msgstr "Или order= не целое, или его длина (%d) отличается от длины by= (%d)"
 
 #: forder.c:462
 #, c-format
 msgid "internal error: 'by' value %d out of range [1,%d]"
-msgstr ""
+msgstr "внутренняя ошибка: значение 'by'  (%d) вне диапазона [1,%d]"
 
 #: forder.c:464
 #, c-format
 msgid "Column %d is length %d which differs from length of column 1 (%d)\n"
-msgstr ""
+msgstr "Длина колонки %d равно %d, и отличается от длины колонки 1 (%d)\n"
 
 #: forder.c:468
 msgid "retGrp must be TRUE or FALSE"
-msgstr ""
+msgstr "retGrp должен быть TRUE или FALSE"
 
 #: forder.c:471
 msgid "sort must be TRUE or FALSE"
-msgstr ""
+msgstr "sort должен быть TRUE или FALSE"
 
 #: forder.c:474
 msgid "At least one of retGrp= or sort= must be TRUE"
-msgstr ""
+msgstr "Хотя бы один аргумент среди retGrp= или  sort= должен быть равен TRUE"
 
 #: forder.c:476
 msgid "na.last must be logical TRUE, FALSE or NA of length 1"
-msgstr ""
+msgstr "na.last должен быть TRUE, FALSE или NA единичной длины"
 
 #: forder.c:520
 #, c-format
 msgid "Item %d of order (ascending/descending) is %d. Must be +1 or -1."
 msgstr ""
+"Элемент %d аргумента order (сортировка по возрастанию/убыванию) равен %d, а "
+"должен быть равен либо +1, либо -1."
 
 #: forder.c:546
 #, c-format
@@ -1496,100 +1549,120 @@ msgid ""
 "fractions are present. Please consider a 4 byte integer date such as IDate "
 "to save space and time.\n"
 msgstr ""
+"\n"
+"*** Столбец %d, переданный в  forder - это даты, сохраненные, как 8-байтовые "
+"double, но без дробных частей. Для того, чтобы сэкономить память и "
+"вычислительное время, пожалуйста, постарайтесь использовать в качестве дат 4-"
+"байтовые целые, такие как IDate.\n"
 
 #: forder.c:562
 #, c-format
 msgid "Column %d passed to [f]order is type '%s', not yet supported."
 msgstr ""
+"Тип столбца %d, переданного в [f]order  - '%s'. Этот тип пока еще не "
+"поддерживается."
 
 #: forder.c:715
 msgid "Internal error: column not supported, not caught earlier"
-msgstr ""
+msgstr "Внутренняя ошибка: столбец не поддерживается, не заметили это ранее"
 
 #: forder.c:723
 #, c-format
 msgid "nradix=%d\n"
-msgstr ""
+msgstr "nradix=%d\n"
 
 #: forder.c:729
 #, c-format
 msgid ""
 "Failed to allocate TMP or UGRP or they weren't cache line aligned: nth=%d"
 msgstr ""
+"Не получилось выделить TMP или UGRP, или они не были выравнены с линиями "
+"кэша: nth=%d"
 
 #: forder.c:734
 msgid "Could not allocate (very tiny) group size thread buffers"
-msgstr ""
+msgstr "Не смог выделить очень небольшой буфер группы размера потока"
 
 #: forder.c:795
 #, c-format
 msgid "Timing block %2d%s = %8.3f   %8d\n"
-msgstr ""
+msgstr "Временной блок %2d%s = %8.3f   %8d\n"
 
 #: forder.c:798
 #, c-format
 msgid "stat[%03d]==%20<PRIu64>\n"
-msgstr ""
+msgstr "stat[%03d]==%20<PRIu64>\n"
 
 #: forder.c:1054
 #, c-format
 msgid "Failed to allocate parallel counts. my_n=%d, nBatch=%d"
-msgstr ""
+msgstr "Не удалось выделить параллельные счетчики. my_n=%d, nBatch=%d"
 
 #: forder.c:1163
 #, c-format
 msgid "Unable to allocate TMP for my_n=%d items in parallel batch counting"
 msgstr ""
+"Не получилось выделить TMP для my_n=%d элементов в параллельном подсчете "
+"батчей"
 
 #: forder.c:1270
 msgid "Internal error: issorted 'by' must be NULL or integer vector"
 msgstr ""
+"Внутренняя ошибка: issorted 'by' должен быть равен NULL или должен быть "
+"целочисленным вектором"
 
 #: forder.c:1274 forder.c:1324
 #, c-format
 msgid "issorted 'by' [%d] out of range [1,%d]"
-msgstr ""
+msgstr "issorted 'by' [%d] вне диапазона [1,%d]"
 
 #: forder.c:1279
 msgid "is.sorted does not work on list columns"
 msgstr ""
+"is.sorted не работает на колонках, которые содержат списки (на list columns)"
 
 #: forder.c:1311 forder.c:1341 forder.c:1375
 #, c-format
 msgid "type '%s' is not yet supported"
-msgstr ""
+msgstr "тип '%s' пока еще не поддерживается"
 
 #: forder.c:1388
 msgid "x must be either NULL or an integer vector"
-msgstr ""
+msgstr "x должен быть или NULL, или целочисленным вектором"
 
 #: forder.c:1390
 msgid "nrow must be integer vector length 1"
-msgstr ""
+msgstr "nrow должен быть целочисленным вектором единичной длины"
 
 #: forder.c:1392
 #, c-format
 msgid "nrow==%d but must be >=0"
-msgstr ""
+msgstr "nrow==%d, а должно быть >=0"
 
 #: forder.c:1409
 msgid "x must be type 'double'"
-msgstr ""
+msgstr "x должен быть типом 'double'"
 
 #: frank.c:9
 #, c-format
 msgid "Internal error. Argument 'x' to Cdt_na is type '%s' not 'list'"
 msgstr ""
+"Внутренняя ошибка. Тип аргумента 'x' в Cdt_na -  '%s', а должен быть списком "
+"(list)"
 
 #: frank.c:10
 #, c-format
 msgid "Internal error. Argument 'cols' to Cdt_na is type '%s' not 'integer'"
 msgstr ""
+"Внутренняя ошибка. Тип аргумента 'cols' в Cdt_na -  '%s', а должен быть "
+"целым (integer)"
 
 #: frank.c:14 frank.c:155 subset.c:276
 #, c-format
 msgid "Item %d of 'cols' is %d which is outside 1-based range [1,ncol(x)=%d]"
 msgstr ""
+"Элемент %d  'cols' равен %d - это за пределами допустимого диапазона [1,"
+"ncol(x)=%d]"
 
 #: frank.c:24 frank.c:164
 #, c-format
@@ -1597,277 +1670,301 @@ msgid ""
 "Column %d of input list x is length %d, inconsistent with first column of "
 "that item which is length %d."
 msgstr ""
+"Колонка %d входящего списка x имеет длину %d, что не соответствует длине "
+"первой колонке, которая равна  %d."
 
 #: frank.c:63 frank.c:211 transpose.c:88
 #, c-format
 msgid "Unsupported column type '%s'"
-msgstr ""
+msgstr "Неподдерживаемый тип колонки '%s'"
 
 #: frank.c:82
 msgid ""
 "Internal error: invalid ties.method for frankv(), should have been caught "
 "before. please report to data.table issue tracker"
 msgstr ""
+"Внутренняя ошибка: неправильное значение аргумента ties.method в frankv(). "
+"Оно должно было быть замечено ранее. Пожалуйста, сообщите в  об этому в "
+"трекер data.table"
 
 #: frank.c:139
 #, c-format
 msgid "Internal error: unknown ties value in frank: %d"
-msgstr ""
+msgstr "Внутренняя ошибка: неизвестное значение ties в frank: %d"
 
 #: frank.c:150
 #, c-format
 msgid "Internal error. Argument 'x' to CanyNA is type '%s' not 'list'"
 msgstr ""
+"Внутренняя ошибка. Аргумент 'x' в CanyNA - '%s', а должен быть списком (list)"
 
 #: frank.c:151
 #, c-format
 msgid "Internal error. Argument 'cols' to CanyNA is type '%s' not 'integer'"
 msgstr ""
+"Внутренняя ошибка. Аргумент 'cols' в CanyNA - '%s', а должен быть целым "
+"(integer)"
 
 #: fread.c:104
 #, c-format
 msgid ""
 "Internal error in line %d of fread.c, please report on data.table GitHub:  "
 msgstr ""
+"Внутренняя ошибка в строке %d в fread.c. Пожалуйста, сообщите  о ней в data."
+"table GitHub:  "
 
 #: fread.c:147
 #, c-format
 msgid "System error %d unmapping view of file\n"
-msgstr ""
+msgstr "Системная ошибка %d при отключении отображения файла\n"
 
 #: fread.c:150
 #, c-format
 msgid "System errno %d unmapping file: %s\n"
-msgstr ""
+msgstr "Системная ошибка номер %d при отключении отображения файла: %s\n"
 
 #: fread.c:210
 #, c-format
 msgid "Internal error: NUMTYPE(%d) > nLetters(%d)"
-msgstr ""
+msgstr "Внутренняя ошибка: NUMTYPE(%d) > nLetters(%d)"
 
 #: fread.c:435
 #, c-format
 msgid "Unable to allocate %s of contiguous virtual RAM. %s allocation."
-msgstr ""
+msgstr "Не получается выделить %s непрерывной виртуальной RAM. Выделяем %s."
 
 #: fread.c:440
 #, c-format
 msgid "Avoidable %.3f seconds. %s time to copy.\n"
-msgstr ""
+msgstr "Лишние %.3f секунды. %s время на копирование.\n"
 
 #: fread.c:441
 #, c-format
 msgid "  File copy in RAM took %.3f seconds.\n"
-msgstr ""
+msgstr " Копирование файла в RAM заняло %.3f секунд.\n"
 
 #: fread.c:1248
 msgid ""
 "Previous fread() session was not cleaned up properly. Cleaned up ok at the "
 "beginning of this fread() call.\n"
 msgstr ""
+"Предыдущая сессия fread() не была правильно очищена.   Привели в порядок в "
+"начале этого вызова fread().\n"
 
 #: fread.c:1251
 msgid "[01] Check arguments\n"
-msgstr ""
+msgstr "[01] Проверка аргументов\n"
 
 #: fread.c:1258
 #, c-format
 msgid "  Using %d threads (omp_get_max_threads()=%d, nth=%d)\n"
-msgstr ""
+msgstr "  Используем %d потоков (omp_get_max_threads()=%d, nth=%d)\n"
 
 #: fread.c:1266
 msgid ""
 "Internal error: NAstrings is itself NULL. When empty it should be pointer to "
 "NULL."
 msgstr ""
+"Внутренняя ошибка: NAstrings сами по себе NULL. Когда они пустые, они должны "
+"быть указателями на NULL."
 
 #: fread.c:1284
 #, c-format
 msgid "freadMain: NAstring <<%s>> has whitespace at the beginning or end"
-msgstr ""
+msgstr "freadMain: NAstring <<%s>> содержит пробелы в начале или в конце"
 
 #: fread.c:1289
 #, c-format
 msgid ""
 "freadMain: NAstring <<%s>> is recognized as type boolean, this is not "
 "permitted."
-msgstr ""
+msgstr "freadMain: NAstring <<%s>> логического (boolean) типа, это запрещено."
 
 #: fread.c:1300
 msgid "  No NAstrings provided.\n"
-msgstr ""
+msgstr "  Не передан NAstrings.\n"
 
 #: fread.c:1302
 msgid "  NAstrings = ["
-msgstr ""
+msgstr "  NAstrings = ["
 
 #: fread.c:1305
 msgid "]\n"
-msgstr ""
+msgstr "]\n"
 
 #: fread.c:1307
 msgid "  One or more of the NAstrings looks like a number.\n"
-msgstr ""
+msgstr "  Одна или несколько NAstrings похожи на числа.\n"
 
 #: fread.c:1309
 msgid "  None of the NAstrings look like numbers.\n"
-msgstr ""
+msgstr "  Ни одна из NAstrings не похожа на числа.\n"
 
 #: fread.c:1311
 #, c-format
 msgid "  skip num lines = %<PRId64>\n"
-msgstr ""
+msgstr "  пропускаем номера строк = %<PRId64>\n"
 
 #: fread.c:1312
 #, c-format
 msgid "  skip to string = <<%s>>\n"
-msgstr ""
+msgstr "  пропускаем дл строки = <<%s>>\n"
 
 #: fread.c:1313
 #, c-format
 msgid "  show progress = %d\n"
-msgstr ""
+msgstr "  показывать прогресс = %d\n"
 
 #: fread.c:1314
 #, c-format
 msgid "  0/1 column will be read as %s\n"
-msgstr ""
+msgstr "  0/1 столбец будет прочитан как %s\n"
 
 #: fread.c:1322
 #, c-format
 msgid "sep == quote ('%c') is not allowed"
-msgstr ""
+msgstr "sep == quote ('%c') не допустим"
 
 #: fread.c:1323
 msgid "dec='' not allowed. Should be '.' or ','"
-msgstr ""
+msgstr "dec='' не допустим. Должен быть '.' или ','"
 
 #: fread.c:1324
 #, c-format
 msgid "sep == dec ('%c') is not allowed"
-msgstr ""
+msgstr "sep == dec ('%c') не допустим"
 
 #: fread.c:1325
 #, c-format
 msgid "quote == dec ('%c') is not allowed"
-msgstr ""
+msgstr "quote == dec ('%c') не допустим"
 
 #: fread.c:1342
 msgid "[02] Opening the file\n"
-msgstr ""
+msgstr "[02] Открываем файл\n"
 
 #: fread.c:1345
 msgid ""
 "  `input` argument is provided rather than a file name, interpreting as raw "
 "text to read\n"
 msgstr ""
+"  Вместо имени файла передан аргумент `input`. Интерпретируем его, как "
+"текст, который надо прочитать\n"
 
 #: fread.c:1349
 msgid "Internal error: last byte of character input isn't \\0"
-msgstr ""
+msgstr "Внутренняя ошибка: последний байт символьного ввода не \\0"
 
 #: fread.c:1352
 #, c-format
 msgid "  Opening file %s\n"
-msgstr ""
+msgstr "  Открываем файл %s\n"
 
 #: fread.c:1356
 #, c-format
 msgid "file not found: %s"
-msgstr ""
+msgstr "файл не найден: %s"
 
 #: fread.c:1360
 #, c-format
 msgid "Opened file ok but couldn't obtain its size: %s"
-msgstr ""
+msgstr "Открыли файл успешно, но не смогли получить его размер: %s"
 
 #: fread.c:1363 fread.c:1391
 #, c-format
 msgid "File is empty: %s"
-msgstr ""
+msgstr "Файл пуст: %s"
 
 #: fread.c:1364 fread.c:1392
 #, c-format
 msgid "  File opened, size = %s.\n"
-msgstr ""
+msgstr "  Файл открыт, размер = %s.\n"
 
 #: fread.c:1381
 #, c-format
 msgid "File not found: %s"
-msgstr ""
+msgstr "Файл не найден: %s"
 
 #: fread.c:1387
 #, c-format
 msgid "Unable to open file after %d attempts (error %d): %s"
-msgstr ""
+msgstr "Невозможно открыть файл после %d попыток (ошибка %d): %s"
 
 #: fread.c:1389
 #, c-format
 msgid "GetFileSizeEx failed (returned 0) on file: %s"
-msgstr ""
+msgstr "Не удачный вызов GetFileSizeEx (получили 0) с файлом: %s"
 
 #: fread.c:1394
 #, c-format
 msgid "This is Windows, CreateFileMapping returned error %d for file %s"
-msgstr ""
+msgstr "Это Windows, CreateFileMapping вернул ошибку %d для файла %s"
 
 #: fread.c:1401
 #, c-format
 msgid ""
 "Opened %s file ok but could not memory map it. This is a %dbit process. %s."
 msgstr ""
+"Нормально открыли файл %s но не смогли отобразить его в память. Это %d-"
+"битный процесс. %s."
 
 #: fread.c:1402
 msgid "Please upgrade to 64bit"
-msgstr ""
+msgstr "Пожалуйста, обновитесь до 64бит"
 
 #: fread.c:1402
 msgid "There is probably not enough contiguous virtual memory available"
-msgstr ""
+msgstr "Вероятно, недостаточное количество непрерывной виртуальной памяти"
 
 #: fread.c:1405
 msgid "  Memory mapped ok\n"
-msgstr ""
+msgstr " Отображение в память удалось\n"
 
 #: fread.c:1407
 msgid ""
 "Internal error: Neither `input` nor `filename` are given, nothing to read."
-msgstr ""
+msgstr "Внутренняя ошибка: не заданы ни `input`, ни `filename`, нечего читать."
 
 #: fread.c:1424
 msgid "[03] Detect and skip BOM\n"
-msgstr ""
+msgstr "[03] Обнаружили и пропустили BOM\n"
 
 #: fread.c:1428
 msgid ""
 "  UTF-8 byte order mark EF BB BF found at the start of the file and "
 "skipped.\n"
 msgstr ""
+"  В начале файла найдена и пропущена метка порядка байтов UTF-8  EF BB BF.\n"
 
 #: fread.c:1433
 msgid ""
 "GB-18030 encoding detected, however fread() is unable to decode it. Some "
 "character fields may be garbled.\n"
 msgstr ""
+"Обнаружена кодировка GB-18030, однако fread() не может её декодировать. "
+"Некоторые строковые значения могут быть повреждены.\n"
 
 #: fread.c:1436
 msgid ""
 "File is encoded in UTF-16, this encoding is not supported by fread(). Please "
 "recode the file to UTF-8."
 msgstr ""
+"Файл в кодировке UTF-16, она не поддерживается в fread(). Пожалуйста, "
+"перекодируйте файл в UTF-8."
 
 #: fread.c:1441
 #, c-format
 msgid "  Last byte(s) of input found to be %s and removed.\n"
-msgstr ""
+msgstr "  Последние байт(ы) ввода равны %s. Они удалены.\n"
 
 #: fread.c:1444
 msgid "Input is empty or only contains BOM or terminal control characters"
 msgstr ""
+"Input пустой или содержит только BOM или терминальные управляющие символы"
 
 #: fread.c:1451
 msgid "[04] Arrange mmap to be \\0 terminated\n"
-msgstr ""
+msgstr "[04] Делаем mmap оканчивающимся на \\0n\n"
 
 #: fread.c:1458
 msgid ""
@@ -1875,6 +1972,10 @@ msgid ""
 "one line ending. This is unusual but will happen normally when there is no "
 "\\r either; e.g. a single line missing its end of line.\n"
 msgstr ""
+"  В файле нет ни одного \\n, поэтому одиночные \\r (если они есть) будут "
+"использованы как окончания строк. Это необычно, но часто происходит тогда, "
+"когда также нет \\r. Например, в случае единственной строки без символа "
+"конца строки.\n"
 
 #: fread.c:1459
 msgid ""
@@ -1882,6 +1983,9 @@ msgid ""
 "line endings (e.g. mixed \\n and \\r\\n in one file). This is common and "
 "ideal.\n"
 msgstr ""
+"  \\n найден и разные строки могут заканчиваться разными символами окончания "
+"строк (например,  \\n и \\r\\n перемешаны в одном файле). Это общепринято и "
+"идеально.\n"
 
 #: fread.c:1483
 #, c-format
@@ -1889,6 +1993,8 @@ msgid ""
 "  File ends abruptly with '%c'. Final end-of-line is missing. Using cow page "
 "to write 0 to the last byte.\n"
 msgstr ""
+"  Файл неожиданно закончился символом '%c'. Последний символ конца строки "
+"пропущен. Используем copy-on-write страницу для записи  0 в последний байт.\n"
 
 #: fread.c:1489
 msgid ""
@@ -1896,15 +2002,21 @@ msgid ""
 "also its size is a multiple of 4096 bytes. Please properly end the last row "
 "with a newline using for example 'echo >> file' to avoid this "
 msgstr ""
+"Этот файл очень необычный: он неожиданно заканчивается без последнего "
+"символа новой строки и размер файла кратен 4096 байтам. Для того, чтобы "
+"этого избежать, правильно завершите последнюю строку файла символом новой "
+"строки, используя, например  'echo >> file' "
 
 #: fread.c:1490
 #, c-format
 msgid "  File ends abruptly with '%c'. Copying file in RAM. %s copy.\n"
 msgstr ""
+"  Файл неожиданно заканчивается символом '%c'. Копируем файл в RAM. %s "
+"скопировано.\n"
 
 #: fread.c:1524
 msgid "[05] Skipping initial rows if needed\n"
-msgstr ""
+msgstr "[05] Пропускаем начальные строки, если надо\n"
 
 #: fread.c:1530
 #, c-format
@@ -1912,6 +2024,9 @@ msgid ""
 "skip='%s' not found in input (it is case sensitive and literal; i.e., no "
 "patterns, wildcards or regex)"
 msgstr ""
+"skip='%s' не найдено во входных данных (skip чувствителен к регистру "
+"символов и не поддерживает регулярные выражения, паттерны и символы "
+"подстановки)"
 
 #: fread.c:1536
 #, c-format
@@ -1919,71 +2034,84 @@ msgid ""
 "Found skip='%s' on line %<PRIu64>. Taking this to be header row or first row "
 "of data.\n"
 msgstr ""
+"Найден skip='%s' в строке %<PRIu64>. Берем эту строку, как заголовок или "
+"первую строку данных.\n"
 
 #: fread.c:1549
 #, c-format
 msgid "  Skipped to line %<PRIu64> in the file"
-msgstr ""
+msgstr "  Пропущено до строки %<PRIu64> в файле"
 
 #: fread.c:1550
 #, c-format
 msgid "skip=%<PRIu64> but the input only has %<PRIu64> line%s"
-msgstr ""
+msgstr "skip=%<PRIu64> но во входных данных только %<PRIu64> строк %s"
 
 #: fread.c:1559
 msgid ""
 "Input is either empty, fully whitespace, or skip has been set after the last "
 "non-whitespace."
 msgstr ""
+"Входные данные или пустые, или состоят только из пробелов, или skip "
+"установлен на строку после последнего непробельного символа."
 
 #: fread.c:1561
 #, c-format
 msgid "  Moved forward to first non-blank line (%d)\n"
-msgstr ""
+msgstr "  Передвинулись вперед, к первой непустой строке (%d)\n"
 
 #: fread.c:1562
 #, c-format
 msgid "  Positioned on line %d starting: <<%s>>\n"
-msgstr ""
+msgstr "  Остановились на строке %d, начинающейся с: <<%s>>\n"
 
 #: fread.c:1580
 msgid "[06] Detect separator, quoting rule, and ncolumns\n"
 msgstr ""
+"[06] Определяем разделитель, правила использования кавычек и количество "
+"колонок\n"
 
 #: fread.c:1584
 msgid "  sep='\\n' passed in meaning read lines as single character column\n"
 msgstr ""
+"  передан sep='\\n', обозначающий чтение строк в единственную символьную "
+"колонку\n"
 
 #: fread.c:1603
 msgid "  Detecting sep automatically ...\n"
-msgstr ""
+msgstr "  Определяем разделитель sep автоматически ...\n"
 
 #: fread.c:1610
 #, c-format
 msgid "  Using supplied sep '%s'\n"
-msgstr ""
+msgstr "  Используем заданный sep '%s'\n"
 
 #: fread.c:1644
 #, c-format
 msgid "  with %d fields using quote rule %d\n"
-msgstr ""
+msgstr "  с %d полями, используя правило заключения в кавычки %d\n"
 
 #: fread.c:1694
 #, c-format
 msgid "  with %d lines of %d fields using quote rule %d\n"
 msgstr ""
+"  с %d строками из %d полей, используя правило заключения в кавычки %d\n"
 
 #: fread.c:1701
 msgid ""
 "  No sep and quote rule found a block of 2x2 or greater. Single column "
 "input.\n"
 msgstr ""
+"  Не найдены разделитель и кавычки в блоке 2x2 или больше. Считаем, что "
+"входные данные с одной колонкой.\n"
 
 #: fread.c:1717
 msgid ""
 "Single column input contains invalid quotes. Self healing only effective "
 "when ncol>1"
 msgstr ""
+"Одноколоночные входные данные  содержат неправильные кавычки. Автоматическое "
+"исправление эффективно только, когда колонок больше одной"
 
 #: fread.c:1722
 #, c-format
@@ -1992,17 +2120,22 @@ msgid ""
 "quoted (e.g. field separator does not appear within any field), try quote="
 "\"\" to avoid this warning."
 msgstr ""
+"Найдено и исправлено неправильное использование кавычек в первых %d строках. "
+"Если поля не в кавычках (например, символ разделителя не появляется внутри "
+"поля), попробуйте quote=\"\" для того, чтобы избежать этого предупреждения."
 
 #: fread.c:1738
 #, c-format
 msgid ""
 "Internal error: ncol==%d line==%d after detecting sep, ncol and first line"
 msgstr ""
+"Внутренняя ошибка: ncol==%d line==%d после определения разделителя (sep), "
+"количества колонок (ncol) и первой строки"
 
 #: fread.c:1741
 #, c-format
 msgid "Internal error: first line has field count %d but expecting %d"
-msgstr ""
+msgstr "Внутренняя ошибка: в первой строке %d полей, а ожидается %d полей"
 
 #: fread.c:1743
 #, c-format
@@ -2010,63 +2143,73 @@ msgid ""
 "  Detected %d columns on line %d. This line is either column names or first "
 "data row. Line starts as: <<%s>>\n"
 msgstr ""
+"  Обнаружено %d столбцов в строке %d. Эта строка или содержит названия "
+"колонок, или первая строка данных. Строка начинается так: <<%s>>\n"
 
 #: fread.c:1745
 #, c-format
 msgid "  Quote rule picked = %d\n"
-msgstr ""
+msgstr "  Выбранное правило использования кавычек = %d\n"
 
 #: fread.c:1746
 #, c-format
 msgid "  fill=%s and the most number of columns found is %d\n"
-msgstr ""
+msgstr "  fill=%s и самое большое найденное количество колонок равно %d\n"
 
 #: fread.c:1752
 msgid ""
 "This file is very unusual: it's one single column, ends with 2 or more end-"
 "of-line (representing several NA at the end), and is a multiple of 4096, too."
 msgstr ""
+"Этот файл очень необычен: у него одна единственная колонка, заканчивающаяся "
+"на 2 и более символа конца строки (представляющих несколько NA в конце), и "
+"он также кратен 4096."
 
 #: fread.c:1753
 #, c-format
 msgid "  Copying file in RAM. %s\n"
-msgstr ""
+msgstr "  Копируем файл в RAM. %s\n"
 
 #: fread.c:1759
 msgid ""
 "  1-column file ends with 2 or more end-of-line. Restoring last eol using "
 "extra byte in cow page.\n"
 msgstr ""
+"  Файл с одной колонкой заканчивается на 2 или более символа конца строки. "
+"Восстанавливаем последний символ конца строки с помощью дополнительного "
+"байта в copy-on-write странице.\n"
 
 #: fread.c:1778
 msgid ""
 "[07] Detect column types, good nrow estimate and whether first row is column "
 "names\n"
 msgstr ""
+"[07] Определяем типы столбцов, наличие имен столбцов в первой строке и "
+"оцениваем количество строк в файле\n"
 
 #: fread.c:1779
 #, c-format
 msgid "  'header' changed by user from 'auto' to %s\n"
-msgstr ""
+msgstr "  'header' изменен пользователем с 'auto' на %s\n"
 
 #: fread.c:1783
 #, c-format
 msgid "Failed to allocate 2 x %d bytes for type and tmpType: %s"
-msgstr ""
+msgstr "Не удалось выделить 2 x %d байт для типа и tmpType: %s"
 
 #: fread.c:1804
 #, c-format
 msgid "  Number of sampling jump points = %d because "
-msgstr ""
+msgstr "  Число точек выборочных прыжков = %d потому, что "
 
 #: fread.c:1805
 #, c-format
 msgid "nrow limit (%<PRIu64>) supplied\n"
-msgstr ""
+msgstr "задано ограничение на количество строк (%<PRIu64>)\n"
 
 #: fread.c:1806
 msgid "jump0size==0\n"
-msgstr ""
+msgstr "jump0size==0\n"
 
 #: fread.c:1807
 #, c-format
@@ -2074,6 +2217,8 @@ msgid ""
 "(%<PRIu64> bytes from row 1 to eof) / (2 * %<PRIu64> jump0size) == "
 "%<PRIu64>\n"
 msgstr ""
+"(%<PRIu64> байт от строки 1 до конца файла) / (2 * %<PRIu64> jump0size) == "
+"%<PRIu64>\n"
 
 #: fread.c:1845
 #, c-format
@@ -2081,24 +2226,27 @@ msgid ""
 "  A line with too-%s fields (%d/%d) was found on line %d of sample jump %d. "
 "%s\n"
 msgstr ""
+"  Слишком %s полей (%d/%d) найдено в %d строке выборочного прыжка %d. %s\n"
 
 #: fread.c:1846
 msgid "few"
-msgstr ""
+msgstr "мало"
 
 #: fread.c:1846
 msgid "many"
-msgstr ""
+msgstr "много"
 
 #: fread.c:1846
 msgid ""
 "Most likely this jump landed awkwardly so type bumps here will be skipped."
 msgstr ""
+"Скорее всего этот прыжок  пришелся на какое-то странное место, поэтому "
+"изменение типа будет пропущено."
 
 #: fread.c:1872
 #, c-format
 msgid "  Type codes (jump %03d)    : %s  Quote rule %d\n"
-msgstr ""
+msgstr "  Коды типов (прыжок %03d)    : %s  Правило заключения в кавычки %d\n"
 
 #: fread.c:1885
 #, c-format
@@ -2106,18 +2254,24 @@ msgid ""
 "  'header' determined to be true due to column %d containing a string on row "
 "1 and a lower type (%s) in the rest of the %d sample rows\n"
 msgstr ""
+"  считаем, что у файла есть заголовок из-за колонки %d, содержащей текст в "
+"строке 1 и более простой тип (%s) во всех остальных %d выборочных строках\n"
 
 #: fread.c:1897
 msgid ""
 "Internal error: row before first data row has the same number of fields but "
 "we're not using it."
 msgstr ""
+"Внутренняя ошибка: строка перед первой строкой с данными имеет такое же "
+"количество полей, но мы не используем его."
 
 #: fread.c:1898
 msgid ""
 "Internal error: ch!=pos after counting fields in the line before the first "
 "data row."
 msgstr ""
+"Внутренняя ошибка: ch!=pos после подсчета полей в строке перед первой "
+"строкой с данными."
 
 #: fread.c:1899
 #, c-format
@@ -2125,6 +2279,8 @@ msgid ""
 "Types in 1st data row match types in 2nd data row but previous row has %d "
 "fields. Taking previous row as column names."
 msgstr ""
+"Типы в первой строке данных соответствуют типам второй строки данных, но "
+"предыдущая строка имеет %d полей. Считаем предыдущую строку именами столбцов."
 
 #: fread.c:1902
 #, c-format
@@ -2132,6 +2288,8 @@ msgid ""
 "Detected %d column names but the data has %d columns (i.e. invalid file). "
 "Added %d extra default column name%s\n"
 msgstr ""
+"Обнаружено %d имен столбцов, но в данных %d колонок (т. е.  это неправильный "
+"файл). Добавили %d дополнительных имен столбцов%s\n"
 
 #: fread.c:1903
 msgid ""
@@ -2139,16 +2297,21 @@ msgid ""
 "setnames() afterwards if this guess is not correct, or fix the file write "
 "command that created the file to create a valid file."
 msgstr ""
+" для первого столбца, который считаем именами строк или индексом. "
+"Используйте setnames() после загрузки файла, если это неверно. Или исправьте "
+"команду, которой записывали файл, чтобы она создавала верный файл."
 
 #: fread.c:1903
 msgid "s at the end."
-msgstr ""
+msgstr "s в конце."
 
 #: fread.c:1905
 msgid ""
 "Internal error: fill=true but there is a previous row which should already "
 "have been filled."
 msgstr ""
+"Внутренняя ошибка: fill=TRUE, но есть предыдущая строка, которая уже должна "
+"быть заполнена."
 
 #: fread.c:1906
 #, c-format
@@ -2156,11 +2319,14 @@ msgid ""
 "Detected %d column names but the data has %d columns. Filling rows "
 "automatically. Set fill=TRUE explicitly to avoid this warning.\n"
 msgstr ""
+"Обнаружено %d имен столбцов, но в данных %d колонок. Заполняем строки "
+"автоматически. Явно укажите fill=TRUE для того, чтобы убрать это "
+"предупреждение.\n"
 
 #: fread.c:1910
 #, c-format
 msgid "Failed to realloc 2 x %d bytes for type and tmpType: %s"
-msgstr ""
+msgstr "Не удалось повторно выделить 2 x %d байт для типа и tmpType: %s"
 
 #: fread.c:1930
 #, c-format
@@ -2168,27 +2334,33 @@ msgid ""
 "  'header' determined to be %s because there are%s number fields in the "
 "first and only row\n"
 msgstr ""
+"  считаем, что 'header' будет %s, потому что есть %s числовых полей в первой "
+"и единственной строке\n"
 
 #: fread.c:1930
 msgid " no"
-msgstr ""
+msgstr " нет"
 
 #: fread.c:1933
 msgid ""
 "  'header' determined to be true because all columns are type string and a "
 "better guess is not possible\n"
 msgstr ""
+"  Считаем, что 'header' будет TRUE, потому что все колонки текстовые и это "
+"наилучшее предположение\n"
 
 #: fread.c:1935
 msgid ""
 "  'header' determined to be false because there are some number columns and "
 "those columns do not have a string field at the top of them\n"
 msgstr ""
+"  Считаем, что 'header' будет FALSE, потому что есть несколько колонок без "
+"текстового поля над ними\n"
 
 #: fread.c:1951
 #, c-format
 msgid "  Type codes (first row)   : %s  Quote rule %d\n"
-msgstr ""
+msgstr "  Коды типов (первая строка)   : %s  Правило заключения в кавычки %d\n"
 
 #: fread.c:1960
 #, c-format
@@ -2196,10 +2368,12 @@ msgid ""
 "  All rows were sampled since file is small so we know nrow=%<PRIu64> "
 "exactly\n"
 msgstr ""
+"  В выборку включены все строки, потому что файл маленький. И поэтому мы "
+"знаем точное количество строк: nrow=%<PRIu64>\n"
 
 #: fread.c:1972 fread.c:1979
 msgid "  =====\n"
-msgstr ""
+msgstr "  =====\n"
 
 #: fread.c:1973
 #, c-format
@@ -2207,17 +2381,24 @@ msgid ""
 "  Sampled %<PRIu64> rows (handled \\n inside quoted fields) at %d jump "
 "points\n"
 msgstr ""
+"  Выбрано %<PRIu64> строк (обработаны \\n внутри закавыченных полей)  на %d "
+"точках прыжков\n"
 
 #: fread.c:1974
 #, c-format
 msgid ""
 "  Bytes from first data row on line %d to the end of last row: %<PRIu64>\n"
 msgstr ""
+"  Байт с первой строки с данными на строке %d до конца последней строки: "
+"%<PRIu64>\n"
 
 #: fread.c:1975
 #, c-format
 msgid "  Line length: mean=%.2f sd=%.2f min=%d max=%d\n"
 msgstr ""
+"  Длина строки: средняя=%.2f стандартное отклонение=%.2f минимальная =%d "
+"максимальная=%d\n"
+"\n"
 
 #: fread.c:1976
 #, c-format
