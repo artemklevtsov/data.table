@@ -8,12 +8,12 @@ msgstr ""
 "Project-Id-Version: data.table 1.12.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-17 14:38+0800\n"
-"PO-Revision-Date: 2020-08-24 18:25+0700\n"
+"PO-Revision-Date: 2020-09-13 19:51+0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.3\n"
 "Last-Translator: Artem Klevtsov <a.a.klevtsov@gmail.com>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
@@ -2217,12 +2217,12 @@ msgstr ""
 #: fread.c:1975
 #, c-format
 msgid "  Line length: mean=%.2f sd=%.2f min=%d max=%d\n"
-msgstr ""
+msgstr "   Длина строки: mean=%.2f sd=%.2f min=%d max=%d\n"
 
 #: fread.c:1976
 #, c-format
 msgid "  Estimated number of rows: %<PRIu64> / %.2f = %<PRIu64>\n"
-msgstr ""
+msgstr "  Ожидаемое количество строк: %<PRIu64> / %.2f = %<PRIu64>\n"
 
 #: fread.c:1977
 #, c-format
@@ -2230,43 +2230,48 @@ msgid ""
 "  Initial alloc = %<PRIu64> rows (%<PRIu64> + %d%%) using bytes/"
 "max(mean-2*sd,min) clamped between [1.1*estn, 2.0*estn]\n"
 msgstr ""
+" Исходное выделение = %<PRIu64> строк (%<PRIu64> + %d%%) с использованием "
+"bytes/max(mean-2*sd,min) с ограничение в пределах\n"
+" [1.1*estn, 2.0*estn]\n"
 
 #: fread.c:1981
 #, c-format
 msgid "Internal error: sampleLines(%<PRIu64>) > allocnrow(%<PRIu64>)"
-msgstr ""
+msgstr "Внутренняя ошибка: sampleLines(%<PRIu64>) > allocnrow(%<PRIu64>)"
 
 #: fread.c:1985
 #, c-format
 msgid "  Alloc limited to lower nrows=%<PRIu64> passed in.\n"
 msgstr ""
+" Выделение ограничено величиной ниже числа переданных строк nrows="
+"%<PRIu64>.\n"
 
 #: fread.c:1997
 msgid "[08] Assign column names\n"
-msgstr ""
+msgstr "[08] Присваивание имен столбцов\n"
 
 #: fread.c:2005
 #, c-format
 msgid "Unable to allocate %d*%d bytes for column name pointers: %s"
-msgstr ""
+msgstr "Невозможно выделить %d*%d байт для указателей имен столбцов: %s"
 
 #: fread.c:2027
 #, c-format
 msgid "Internal error: reading colnames ending on '%c'"
-msgstr ""
+msgstr "Внутренняя ошибка: имена считываемых столбцов оканчиваются на '%c'"
 
 #: fread.c:2045
 msgid "[09] Apply user overrides on column types\n"
-msgstr ""
+msgstr "[09] Применение перезаписи типов столбцов пользователем\n"
 
 #: fread.c:2049
 msgid "  Cancelled by user: userOverride() returned false."
-msgstr ""
+msgstr " Отменено пользователем: вызов userOverride() вернул false."
 
 #: fread.c:2059
 #, c-format
 msgid "Failed to allocate %d bytes for size array: %s"
-msgstr ""
+msgstr "Не удалось выделить %d байт для размера массива: %s"
 
 #: fread.c:2066
 #, c-format
@@ -2275,46 +2280,56 @@ msgid ""
 "ignored. Only overrides to a higher type are currently supported. If this "
 "was intended, please coerce to the lower type afterwards."
 msgstr ""
+"Проигнорирована попытка перезаписать столбец %d <<%.*s>> , понизив его тип с "
+"'%s' до '%s'. В данный момент поддерживается только перезапись с повышением "
+"типа. Если попытка была преднамеренной, пожалуйста, выполните преобразование "
+"в более низкий тип позднее."
 
+# Вообще не понял, о чем тут пишут
 #: fread.c:2080
-#, c-format
+#, fuzzy, c-format
 msgid "  After %d type and %d drop user overrides : %s\n"
-msgstr ""
+msgstr "  После типа %d и понижения %d пользователь выполнил перезапись : %s\n"
 
 #: fread.c:2088
 msgid "[10] Allocate memory for the datatable\n"
-msgstr ""
+msgstr "[10] Выделение памяти для datatable\n"
 
 #: fread.c:2089
 #, c-format
 msgid "  Allocating %d column slots (%d - %d dropped) with %<PRIu64> rows\n"
 msgstr ""
+" Выделение %d слотов под столбцы (%d - %d было исключено) с %<PRIu64> "
+"строками\n"
 
 #: fread.c:2143
 #, c-format
 msgid "Buffer size %<PRId64> is too large\n"
-msgstr ""
+msgstr "Размер буфера %<PRId64> слишком велик\n"
 
 #: fread.c:2146
 msgid "[11] Read the data\n"
-msgstr ""
+msgstr "[11] Чтение данных\n"
 
 #: fread.c:2149
 #, c-format
 msgid "  jumps=[%d..%d), chunk_size=%<PRIu64>, total_size=%<PRIu64>\n"
-msgstr ""
+msgstr "  jumps=[%d..%d), chunk_size=%<PRIu64>, total_size=%<PRIu64>\n"
 
 #: fread.c:2161
 #, c-format
 msgid "Internal error: Master thread is not thread 0 but thread %d.\n"
-msgstr ""
+msgstr "Внутренняя ошибка: главный поток имеет номер %d, а не 0.\n"
 
+# Возможно, неправильно распарсил
 #: fread.c:2369
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Column %d (\"%.*s\") bumped from '%s' to '%s' due to <<%.*s>> on row "
 "%<PRIu64>\n"
 msgstr ""
+"Для столбца %d (\"%.*s\") тип изменен с '%s' до '%s' из-за <<%.*s>> в строке "
+"%<PRIu64>\n"
 
 #: fread.c:2418
 #, c-format
@@ -2322,6 +2337,8 @@ msgid ""
 "Internal error: invalid head position. jump=%d, headPos=%p, thisJumpStart="
 "%p, sof=%p"
 msgstr ""
+"Внутренняя ошибка: неправильное расположение заголовка. jump=%d, headPos=%p, "
+"thisJumpStart=%p, sof=%p"
 
 #: fread.c:2491
 #, c-format
@@ -2329,31 +2346,35 @@ msgid ""
 "  Too few rows allocated. Allocating additional %<PRIu64> rows (now nrows="
 "%<PRIu64>) and continue reading from jump %d\n"
 msgstr ""
+"  Выделено слишком мало срок. Выделяется дополнительно %<PRIu64> строк "
+"(теперь количество строк равно %<PRIu64>) и продолжается чтение с позиции "
+"%d\n"
 
+# не понял, о чем это
 #: fread.c:2498
 #, c-format
 msgid "  Restarting team from jump %d. nSwept==%d quoteRule==%d\n"
 msgstr ""
 
 #: fread.c:2518
-#, c-format
+#, fuzzy, c-format
 msgid "  %d out-of-sample type bumps: %s\n"
-msgstr ""
+msgstr "  %d повышение типов, не входящих в выборку: %s\n"
 
 #: fread.c:2554
 #, c-format
 msgid ""
 "Read %<PRIu64> rows x %d columns from %s file in %02d:%06.3f wall clock "
 "time\n"
-msgstr ""
+msgstr "Прочитано %<PRIu64> строк x %d столбцов из %s файла за %02d:%06.3f\n"
 
 #: fread.c:2561
 msgid "[12] Finalizing the datatable\n"
-msgstr ""
+msgstr "[12] Завершение таблицы datatable\n"
 
 #: fread.c:2562
 msgid "  Type counts:\n"
-msgstr ""
+msgstr "  Количество типов:\n"
 
 #: fread.c:2564
 #, c-format
@@ -3289,18 +3310,25 @@ msgid ""
 "No non-missing values found in at least one group. Coercing to numeric type "
 "and returning 'Inf' for such groups to be consistent with base"
 msgstr ""
+"Как минимум в одной группе все значения являются пропусками. Для этих групп "
+"выполнено преобразование в тип numeric и возвращено 'Inf' для совместимости "
+"с базовыми функциями R"
 
 #: gsumm.c:756 gsumm.c:891
 msgid ""
 "No non-missing values found in at least one group. Returning 'NA' for such "
 "groups to be consistent with base"
 msgstr ""
+"Как минимум в одной группе все значения являются пропусками. Для этих групп "
+"возвращено 'NA' для совместимости с базовыми функциями R"
 
 #: gsumm.c:783
 msgid ""
 "No non-missing values found in at least one group. Returning 'Inf' for such "
 "groups to be consistent with base"
 msgstr ""
+"Как минимум в одной группе все значения являются пропусками. Для этих групп "
+"возвращено 'Inf' для совместимости с базовыми функциями R"
 
 #: gsumm.c:791
 msgid "Type 'complex' has no well-defined min"
