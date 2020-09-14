@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: data.table 1.12.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-17 14:38+0800\n"
-"PO-Revision-Date: 2020-09-13 19:57+0300\n"
+"PO-Revision-Date: 2020-09-14 20:50+0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2379,12 +2379,12 @@ msgstr "  Количество типов:\n"
 #: fread.c:2564
 #, c-format
 msgid "%10d : %-9s '%c'\n"
-msgstr ""
+msgstr "%10d : %-9s '%c'\n"
 
 #: fread.c:2580
 #, c-format
 msgid "Discarded single-line footer: <<%s>>"
-msgstr ""
+msgstr "Отброшен однострочный заголовок: <<%s>>"
 
 #: fread.c:2585
 #, c-format
@@ -2392,38 +2392,47 @@ msgid ""
 "Stopped early on line %<PRIu64>. Expected %d fields but found %d. Consider "
 "fill=TRUE and comment.char=. First discarded non-empty line: <<%s>>"
 msgstr ""
+"Ранняя остановка на строке %<PRIu64>. Ожидется %d полей, но обнаружено %d. "
+"Попробуйте использовать fill=TRUE и comment.char=. Предварительно отброшены "
+"непустые строки: <<%s>>"
 
+# quoting - как по смыслу перевести?
 #: fread.c:2591
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Found and resolved improper quoting out-of-sample. First healed line "
 "%<PRIu64>: <<%s>>. If the fields are not quoted (e.g. field separator does "
 "not appear within any field), try quote=\"\" to avoid this warning."
 msgstr ""
+"Обнаружено и исправлено неправильное использование кавычек. Прежде всего, "
+"исправлена строка %<PRIu64>: <<%s>>. Если поле не окружено кавычками "
+"(например, разделитель полей не встречается внутри любого поля), попробуйте "
+"использовать quote=\"\", чтобы избежать появления данного предупреждения."
 
 #: fread.c:2595
 msgid "=============================\n"
-msgstr ""
+msgstr "=============================\n"
 
 #: fread.c:2597
 #, c-format
 msgid "%8.3fs (%3.0f%%) Memory map %.3fGB file\n"
-msgstr ""
+msgstr "%8.3fs (%3.0f%%) Отображение в память файла весом %.3fGB\n"
 
 #: fread.c:2598
 #, c-format
 msgid "%8.3fs (%3.0f%%) sep="
-msgstr ""
+msgstr "%8.3fs (%3.0f%%) sep="
 
 #: fread.c:2600
 #, c-format
 msgid " ncol=%d and header detection\n"
-msgstr ""
+msgstr " ncol=%d и определение заголовка\n"
 
 #: fread.c:2601
 #, c-format
 msgid "%8.3fs (%3.0f%%) Column type detection using %<PRIu64> sample rows\n"
 msgstr ""
+"%8.3fs (%3.0f%%) Определение типа столбца с использованием %<PRIu64> строк\n"
 
 #: fread.c:2603
 #, c-format
@@ -2431,40 +2440,49 @@ msgid ""
 "%8.3fs (%3.0f%%) Allocation of %<PRIu64> rows x %d cols (%.3fGB) of which "
 "%<PRIu64> (%3.0f%%) rows used\n"
 msgstr ""
+"%8.3fs (%3.0f%%) Выделение %<PRIu64> строк x %d столбцов (%.3fGB), из "
+"которых используется %<PRIu64> (%3.0f%%) строк\n"
 
+# swept?
 #: fread.c:2607
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "%8.3fs (%3.0f%%) Reading %d chunks (%d swept) of %.3fMB (each chunk %d rows) "
 "using %d threads\n"
 msgstr ""
+"%8.3fs (%3.0f%%) Чтение %d чанков (%d swept) из %.3fMB (каждый чанк содержит "
+"%d строк) с использованием %d потоков\n"
 
 #: fread.c:2609
 #, c-format
 msgid ""
 "   + %8.3fs (%3.0f%%) Parse to row-major thread buffers (grown %d times)\n"
 msgstr ""
+"   + %8.3fs (%3.0f%%) Парсинг построчных буферов потока (стало больше в %d "
+"раз)\n"
 
 #: fread.c:2610
 #, c-format
 msgid "   + %8.3fs (%3.0f%%) Transpose\n"
-msgstr ""
+msgstr "   + %8.3fs (%3.0f%%) Транспонирование\n"
 
 #: fread.c:2611
 #, c-format
 msgid "   + %8.3fs (%3.0f%%) Waiting\n"
-msgstr ""
+msgstr "   + %8.3fs (%3.0f%%) Ожидание\n"
 
 #: fread.c:2612
 #, c-format
 msgid ""
 "%8.3fs (%3.0f%%) Rereading %d columns due to out-of-sample type exceptions\n"
 msgstr ""
+"%8.3fs (%3.0f%%) Повторное чтение %d столбцов из-за исключений, связанных с "
+"типами данных\n"
 
 #: fread.c:2614
 #, c-format
 msgid "%8.3fs        Total\n"
-msgstr ""
+msgstr "%8.3fs        Всего\n"
 
 #: freadR.c:85
 msgid ""
@@ -2945,16 +2963,16 @@ msgstr ""
 
 #: fsort.c:247
 msgid "Top 5 MSB counts: "
-msgstr ""
+msgstr "Топ-5 количеств MSB: "
 
 #: fsort.c:247
 #, c-format
 msgid "%<PRId64> "
-msgstr ""
+msgstr "%<PRId64> "
 
 #: fsort.c:247 fwrite.c:702 fwrite.c:966
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: fsort.c:248
 #, c-format
@@ -3056,12 +3074,12 @@ msgstr ""
 #: fwrite.c:765 fwrite.c:773 fwrite.c:972
 #, c-format
 msgid "%s: '%s'"
-msgstr ""
+msgstr "%s: '%s'"
 
 #: fwrite.c:770
 #, c-format
 msgid "done in %.3fs\n"
-msgstr ""
+msgstr "Выполнено за %.3fs\n"
 
 #: fwrite.c:772
 msgid "No data rows present (nrow==0)\n"
