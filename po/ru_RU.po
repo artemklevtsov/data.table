@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: data.table 1.12.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-17 14:38+0800\n"
-"PO-Revision-Date: 2020-09-20 11:50+0300\n"
+"PO-Revision-Date: 2020-09-20 20:33+0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2536,7 +2536,7 @@ msgstr ""
 msgid "Internal error: NAstringsArg is type '%s'. R level catches this"
 msgstr ""
 "Внутренняя ошибка: NAstringsArg имеет тип '%s'. Это обрабатывается на уровне "
-"R."
+"R"
 
 #: freadR.c:159
 #, c-format
@@ -2854,50 +2854,59 @@ msgstr "adaptive должен быть равен TRUE или FALSE"
 #: frollR.c:58
 msgid "n must be integer, list is accepted for adaptive TRUE"
 msgstr ""
+"n должен иметь тип integer, список принимается, когда adaptive равен TRUE"
 
 #: frollR.c:65 frollR.c:256 frollR.c:259
 msgid "n must be integer"
-msgstr ""
+msgstr "n должен иметь тип integer"
 
 #: frollR.c:72
 msgid "n must be positive integer values (> 0)"
-msgstr ""
+msgstr "n должен быть положительным целым числом (> 0)"
 
 #: frollR.c:81 frollR.c:93
 msgid "n must be integer vector or list of integer vectors"
-msgstr ""
+msgstr "n должен быть вектором типа integer или списком таких векторов"
 
 #: frollR.c:104 gsumm.c:342 gsumm.c:577 gsumm.c:686 gsumm.c:805 gsumm.c:950
 #: gsumm.c:1261 gsumm.c:1402 uniqlist.c:351
 msgid "na.rm must be TRUE or FALSE"
-msgstr ""
+msgstr "na.rm должен быть равен TRUE или FALSE"
 
 #: frollR.c:107
 msgid "hasNA must be TRUE, FALSE or NA"
-msgstr ""
+msgstr "hasNA должен быть равен TRUE, FALSE или NA"
 
 #: frollR.c:109
 msgid ""
 "using hasNA FALSE and na.rm TRUE does not make sense, if you know there are "
 "NA values use hasNA TRUE, otherwise leave it as default NA"
 msgstr ""
+"использование hasNA FALSE и na.rm TRUE не имеет смысла, если вы знаете о "
+"наличии NA, используйте hasNA TRUE, в противном случае оставьте NA по "
+"умолчанию"
 
 #: frollR.c:119 frollR.c:275
 msgid ""
 "Internal error: invalid align argument in rolling function, should have been "
 "caught before. please report to data.table issue tracker."
 msgstr ""
+"Внутренняя ошибка: недопустимый аргумент align в roll-функции, который "
+"должен обрабатываться заранее. Пожалуйста, сообщите в issue tracker data."
+"table."
 
 #: frollR.c:122
 msgid ""
 "using adaptive TRUE and align argument different than 'right' is not "
 "implemented"
 msgstr ""
+"использование аргументов adaptive TRUE и align, отличного от 'right', пока "
+"не реализовано"
 
 #: frollR.c:126 frollR.c:297 types.c:64
 #, c-format
 msgid "%s: allocating memory for results %dx%d\n"
-msgstr ""
+msgstr "%s: выделение памяти для результатов %dx%d\n"
 
 #: frollR.c:135
 msgid ""
@@ -2906,12 +2915,18 @@ msgid ""
 "function on list having variable length of elements call it for each field "
 "separately"
 msgstr ""
+"скользящая функция adaptive может обрабатывать только аргумент 'x' с "
+"одинаковой длиной элементов, такой как data.table или data.frame; в случае "
+"списков с разной длиной элементов нужно вызывать скользящую функцию для "
+"каждого элемента по отдельности"
 
 #: frollR.c:137
 msgid ""
 "length of integer vector(s) provided as list to 'n' argument must be equal "
 "to number of observations provided in 'x'"
 msgstr ""
+"длина целочисленного вектора(ов), переданного как список в аргументе 'n', "
+"должна быть равна числу наблюдений в 'x'"
 
 #: frollR.c:151
 msgid ""
@@ -2921,11 +2936,11 @@ msgstr ""
 
 #: frollR.c:155 frollR.c:279 nafill.c:162 shift.c:21
 msgid "fill must be a vector of length 1"
-msgstr ""
+msgstr "fill должен быть вектором единичной длины"
 
 #: frollR.c:169 frollR.c:292
 msgid "fill must be numeric"
-msgstr ""
+msgstr "fill должен иметь тип numeric"
 
 #: frollR.c:185
 msgid ""
@@ -2964,31 +2979,33 @@ msgstr ""
 
 #: frollR.c:238
 msgid "internal error: 'fun' must be a function"
-msgstr ""
+msgstr "внутренняя ошибка: 'fun' должен быть функцией"
 
 #: frollR.c:240
 msgid "internal error: 'rho' should be an environment"
-msgstr ""
+msgstr "внутренняя ошибка: 'rho' должен быть  окружением"
 
 #: frolladaptive.c:29 frolladaptive.c:218
 #, c-format
 msgid "%s: running for input length %<PRIu64>, hasna %d, narm %d\n"
-msgstr ""
+msgstr "%s: запущено для входа длиной %<PRIu64>, hasna %d, narm %d\n"
 
 #: frolladaptive.c:35 frolladaptive.c:224
 #, c-format
 msgid "%s: Unable to allocate memory for cumsum"
-msgstr ""
+msgstr "%s: Невозможно выделить память для cumsum"
 
 #: frolladaptive.c:71 frolladaptive.c:260
 #, c-format
 msgid "%s: Unable to allocate memory for cum NA counter"
-msgstr ""
+msgstr "%s: Невозможно выделить память для кумулятивного счетчика NA"
 
 #: frolladaptive.c:114 frolladaptive.c:298
 #, c-format
 msgid "%s: running in parallel for input length %<PRIu64>, hasna %d, narm %d\n"
 msgstr ""
+"%s: запуск в параллельном режиме для входа длиной %<PRIu64>, hasna %d, narm "
+"%d\n"
 
 #: fsort.c:111
 msgid "x must be a vector of type 'double' currently"
@@ -3023,7 +3040,7 @@ msgid ""
 "counts is %dMB (%d pages per nBatch=%d, batchSize=%<PRIu64>, lastBatchSize="
 "%<PRIu64>)\n"
 msgstr ""
-"количества равны %dMB (%d страниц на nBatch=%d, batchSize=%<PRIu64>, "
+"счетчики равны %dMB (%d страниц на nBatch=%d, batchSize=%<PRIu64>, "
 "lastBatchSize=%<PRIu64>)\n"
 
 #: fsort.c:231
@@ -3032,7 +3049,7 @@ msgstr "Внутренняя ошибка: counts[nBatch-1][MSBsize-1] != length
 
 #: fsort.c:247
 msgid "Top 5 MSB counts: "
-msgstr "Топ-5 количеств MSB: "
+msgstr "Топ-5 счетчкиков MSB: "
 
 #: fsort.c:247
 #, c-format
@@ -3046,7 +3063,7 @@ msgstr "\n"
 #: fsort.c:248
 #, c-format
 msgid "Reduced MSBsize from %d to "
-msgstr "Значение MSBsize уменьшено с %d до"
+msgstr "Значение MSBsize уменьшено с %d до "
 
 #: fsort.c:252
 #, c-format
@@ -3100,6 +3117,7 @@ msgstr ""
 #, c-format
 msgid "Internal error: type %d has no max length method implemented"
 msgstr ""
+"Внутренняя ошибка: тип %d не имеет реализованного метода максимальной длины"
 
 #: fwrite.c:671
 #, c-format
@@ -3113,6 +3131,9 @@ msgid ""
 "permission to it? Is this Windows and does another process such as Excel "
 "have it open?"
 msgstr ""
+"%s: '%s'. Не удалось открыть файл для записи. Если ли у вас права на эту "
+"операцию? Возможно, вы работаете в ОС Windows, и файл открыт другим "
+"процессом, таким как Excel?"
 
 #: fwrite.c:692
 #, c-format
@@ -3121,25 +3142,28 @@ msgid ""
 "Do you have permission to write here, is there space on the disk and does "
 "the path exist?"
 msgstr ""
+"%s: '%s'. Невозможно создать новый файл для записи (он уже не существует). "
+"Есть ли у вас права на запись, достаточно ли места на диске и существует ли "
+"указанный путь?"
 
 #: fwrite.c:700
 #, c-format
 msgid "Writing bom (%s), yaml (%d characters) and column names (%s) ... "
-msgstr ""
+msgstr "Запись bom (%s), yaml (%d символов) и имен столбцов (%s) ... "
 
 #: fwrite.c:713
 #, c-format
 msgid "Unable to allocate %d MiB for header: %s"
-msgstr ""
+msgstr "Невозможно выделить %d MiB для заголовка: %s"
 
 #: fwrite.c:741 fwrite.c:803
 msgid "Can't allocate gzip stream structure"
-msgstr ""
+msgstr "Невозможно выделить структуру потока gzip"
 
 #: fwrite.c:748
 #, c-format
 msgid "Unable to allocate %d MiB for zbuffer: %s"
-msgstr ""
+msgstr "Невозможно выделить %d MiB для zbuffer: %s"
 
 #: fwrite.c:764
 #, c-format
@@ -3154,7 +3178,7 @@ msgstr "%s: '%s'"
 #: fwrite.c:770
 #, c-format
 msgid "done in %.3fs\n"
-msgstr "Выполнено за %.3fs\n"
+msgstr "выполнено за %.3fs\n"
 
 #: fwrite.c:772
 msgid "No data rows present (nrow==0)\n"
@@ -3166,6 +3190,8 @@ msgid ""
 "Writing %<PRId64> rows in %d batches of %d rows (each buffer size %dMB, "
 "showProgress=%d, nth=%d)\n"
 msgstr ""
+"Запись %<PRId64> строк в %d батчах из %d строк (размер каждого буфера равен "
+"%dMB, showProgress=%d, nth=%d)\n"
 
 #: fwrite.c:980
 #, c-format
@@ -3173,26 +3199,38 @@ msgid ""
 "zlib %s (zlib.h %s) deflate() returned error %d with z_stream->msg==\"%s\" "
 "Z_FINISH=%d Z_BLOCK=%d. %s"
 msgstr ""
+"zlib %s (zlib.h %s) deflate() вернул ошибку %d с z_stream->msg==\"%s\" "
+"Z_FINISH=%d Z_BLOCK=%d. %s"
 
 #: fwrite.c:982
 msgid ""
 "Please include the full output above and below this message in your data."
 "table bug report."
 msgstr ""
+"Пожалуйста, включите весь вывод выше и ниже данного сообщения в багрепорт "
+"data.table."
 
 #: fwrite.c:983
 msgid ""
 "Please retry fwrite() with verbose=TRUE and include the full output with "
 "your data.table bug report."
 msgstr ""
+"Пожалуйста, перезапустите fwrite() сverbose=TRUE и включите весь вывод в "
+"багрепорт data.table."
 
+# возможно, не является, а содержит?
 #: fwriteR.c:41
+#, fuzzy
 msgid "Internal error: col passed to getMaxCategLen is missing levels"
 msgstr ""
+"Внутренняя ошибка: col, переданный в getMaxCategLen, является пропущенными "
+"уровнями"
 
 #: fwriteR.c:75
 msgid "Internal error: getMaxListItemLen should have caught this up front."
 msgstr ""
+"Внутренняя ошибка: это должно быть перехвачено заранее посредством "
+"getMaxListItemLen."
 
 #: fwriteR.c:98
 #, c-format
@@ -3201,6 +3239,10 @@ msgid ""
 "can write list columns containing items which are atomic vectors of type "
 "logical, integer, integer64, double, complex and character."
 msgstr ""
+"Строка %<PRId64> в столбце-списке имеет тип '%s' - он пока не "
+"поддерживается. fwrite() может записывать столбцы-списки, элементы которых "
+"являются атомарными векторами с типами logical, integer, integer64, double, "
+"complex и character."
 
 #: fwriteR.c:103
 #, c-format
@@ -3208,32 +3250,41 @@ msgid ""
 "Internal error: row %<PRId64> of list column has no max length method "
 "implemented"
 msgstr ""
+"Внутренняя ошибка: строка %<PRId64> в столбце-списке не имеет реализованного "
+"метода max length"
 
 #: fwriteR.c:170
 msgid ""
 "fwrite must be passed an object of type list; e.g. data.frame, data.table"
-msgstr ""
+msgstr "в fwrite должен передаваться список; например, data.frame, data.table"
 
 #: fwriteR.c:179
 msgid "fwrite was passed an empty list of no columns. Nothing to write."
 msgstr ""
+"функции fwrite был передан пусто список без столбцов. Нечего записывать."
 
 #: fwriteR.c:232
 #, c-format
 msgid ""
 "Column %d's length (%d) is not the same as column 1's length (%<PRId64>)"
 msgstr ""
+"Длина столбца %d's (%d) не совпадает с длиной первого столбца(%<PRId64>)"
 
 #: fwriteR.c:236
 #, c-format
 msgid "Column %d's type is '%s' - not yet implemented in fwrite."
 msgstr ""
+"Столбец %d's имеет '%s' , который пока не поддерживается функцией fwrite."
 
+# что-то не то в оригинале
 #: fwriteR.c:261
+#, fuzzy
 msgid ""
 "No list columns are present. Setting sep2='' otherwise quote='auto' would "
 "quote fields containing sep2.\n"
 msgstr ""
+"Столбцы-списки отсутствуют. sep2='' otherwise quote='auto' would quote "
+"fields containing sep2.\n"
 
 #: fwriteR.c:265
 #, c-format
@@ -3241,6 +3292,8 @@ msgid ""
 "If quote='auto', fields will be quoted if the field contains either sep "
 "('%c') or sep2 ('%c') because column %d is a list column.\n"
 msgstr ""
+"Если quote='auto', поля будут закавычены при наличии sep ('%c') или sep2 "
+"('%c'), поскольку столбец %d является столбцом-списком.\n"
 
 #: fwriteR.c:269
 #, c-format
@@ -3248,6 +3301,8 @@ msgid ""
 "sep ('%c'), sep2 ('%c') and dec ('%c') must all be different. Column %d is a "
 "list column."
 msgstr ""
+"sep ('%c'), sep2 ('%c') и dec ('%c') дожны различаться. Столбец %d является "
+"столбцом-списком."
 
 #: gsumm.c:43
 msgid "env is not an environment"
@@ -3270,11 +3325,12 @@ msgstr "length(f)=%d != length(l)=%d"
 #: gsumm.c:66
 #, c-format
 msgid "o has length %d but sum(l)=%d"
-msgstr ""
+msgstr "o имеет длину %d , но sum(l)=%d"
 
 #: gsumm.c:69
 msgid "Internal error: o's maxgrpn attribute mismatches recalculated maxgrpn"
 msgstr ""
+"Внутренняя ошибка: атрибут o maxgrpn не соответствует пересчитанному maxgrpn"
 
 #: gsumm.c:89
 #, c-format
@@ -3282,16 +3338,20 @@ msgid ""
 "Internal error: nrow=%d  ngrp=%d  nbit=%d  shift=%d  highSize=%d  nBatch=%d  "
 "batchSize=%d  lastBatchSize=%d\n"
 msgstr ""
+"Внутренняя ошибка: nrow=%d  ngrp=%d  nbit=%d  shift=%d  highSize=%d  nBatch="
+"%d  batchSize=%d  lastBatchSize=%d\n"
 
 #: gsumm.c:98
-#, c-format
+#, fuzzy, c-format
 msgid "gforce initial population of grp took %.3f\n"
-msgstr ""
+msgstr "Исходное наполнение grp gforce заняло %.3f\n"
 
 #: gsumm.c:116
 msgid ""
 "Internal error: Failed to allocate counts or TMP when assigning g in gforce"
 msgstr ""
+"Внутренняя ошибка: Не удалось выделить счетчики или TMP при присваивании g в "
+"gforce"
 
 # ахинея какая-то получается
 #: gsumm.c:194
@@ -3302,17 +3362,17 @@ msgstr "Присвоение высокого и низкого gforce заня�
 #: gsumm.c:200
 #, c-format
 msgid "gforce eval took %.3f\n"
-msgstr "Вычисления gforce заняли %.3f\n"
+msgstr "вычисления gforce заняли %.3f\n"
 
 #: gsumm.c:216
 msgid "gather took ... "
-msgstr "Вызов gather занял ... "
+msgstr "вызов gather занял ... "
 
 #: gsumm.c:334
 #, c-format
 msgid "gather implemented for INTSXP, REALSXP, and CPLXSXP but not '%s'"
 msgstr ""
-"Функция gather реализована for INTSXP, REALSXP и CPLXSXP , но не для '%s'"
+"функция gather реализована for INTSXP, REALSXP и CPLXSXP , но не для '%s'"
 
 #: gsumm.c:336 gsumm.c:568
 #, c-format
@@ -3380,7 +3440,7 @@ msgstr "Невозможно выделить %d * %d байт для суммы
 #: gsumm.c:612
 #, c-format
 msgid "Unable to allocate %d * %d bytes for counts in gmean na.rm=TRUE"
-msgstr "Невозможно выделить %d * %d байт для количеств в gmean na.rm=TRUE"
+msgstr "Невозможно выделить %d * %d байт для счетчиков в gmean na.rm=TRUE"
 
 # na.rm?
 #: gsumm.c:638
