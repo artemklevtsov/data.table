@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: data.table 1.12.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-17 14:38+0800\n"
-"PO-Revision-Date: 2020-09-20 20:33+0300\n"
+"PO-Revision-Date: 2020-09-25 20:37+0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2933,6 +2933,9 @@ msgid ""
 "Internal error: invalid fun argument in rolling function, should have been "
 "caught before. please report to data.table issue tracker."
 msgstr ""
+"Внутренняя ошибка: недопустимый аргумент align в скользящей функции, который "
+"должен обрабатываться заранее. Пожалуйста, сообщите в issue tracker data."
+"table."
 
 #: frollR.c:155 frollR.c:279 nafill.c:162 shift.c:21
 msgid "fill must be a vector of length 1"
@@ -2947,11 +2950,14 @@ msgid ""
 "Internal error: invalid algo argument in rolling function, should have been "
 "caught before. please report to data.table issue tracker."
 msgstr ""
+"Внутренняя ошибка: недопустимый аргумент algo в скользящей функции, который "
+"должен быть перехвачен ранее. Пожалуйста, сообщите в issue tracker data."
+"table."
 
 #: frollR.c:190
 #, c-format
 msgid "Internal error: badaptive=%d but ik is not integer"
-msgstr ""
+msgstr "Внутренняя ошибка:  badaptive=%d, но это не целое число"
 
 #: frollR.c:198
 #, c-format
@@ -2959,6 +2965,8 @@ msgid ""
 "%s: %d column(s) and %d window(s), if product > 1 then entering parallel "
 "execution\n"
 msgstr ""
+"%s: %d столбца (столбцов) и %d окна (окон), если произведение > 1, "
+"начинается параллельное выполнение\n"
 
 #: frollR.c:200
 #, c-format
@@ -2966,16 +2974,19 @@ msgid ""
 "%s: %d column(s) and %d window(s), not entering parallel execution here "
 "because algo='exact' will compute results in parallel\n"
 msgstr ""
+"%s: %d столбца (столбцов) и %d окна (окон), параллельное выполнение не "
+"начинается, т.к. algo='exact' будет вычислять результаты в параллельном "
+"режиме.\n"
 
 #: frollR.c:219
 #, c-format
 msgid "Internal error: Unknown sfun value in froll: %d"
-msgstr ""
+msgstr "Внутренняя ошибка: неизвестное значений sfun в froll: %d"
 
 #: frollR.c:227 frollR.c:329
 #, c-format
 msgid "%s: processing of %d column(s) and %d window(s) took %.3fs\n"
-msgstr ""
+msgstr "%s: обработка %d столбца(столбцов) и %d окна (окон) заняла %.3fs\n"
 
 #: frollR.c:238
 msgid "internal error: 'fun' must be a function"
